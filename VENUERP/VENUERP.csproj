@@ -314,6 +314,20 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VENUERP.Models\VENUERP.Models.csproj">
+      <Project>{841e4023-cba5-4368-8c36-52f5fa178c98}</Project>
+      <Name>VENUERP.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VENUERP.Repository\VENUERP.Repository.csproj">
+      <Project>{1f7c51bd-84bc-41e7-ab81-cf407889ef35}</Project>
+      <Name>VENUERP.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VENUERP.ViewModels\VENUERP.ViewModels.csproj">
+      <Project>{30e4bc2a-348b-44d7-a334-ea5c92c2835e}</Project>
+      <Name>VENUERP.ViewModels</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -1,0 +1,6 @@
+C:\venuerp\VENUERP.ViewModels\bin\Debug\VENUERP.ViewModels.dll
+C:\venuerp\VENUERP.ViewModels\bin\Debug\VENUERP.ViewModels.pdb
+C:\venuerp\VENUERP.ViewModels\obj\Debug\VENUERP.ViewModels.csprojAssemblyReference.cache
+C:\venuerp\VENUERP.ViewModels\obj\Debug\VENUERP.ViewModels.csproj.CoreCompileInputs.cache
+C:\venuerp\VENUERP.ViewModels\obj\Debug\VENUERP.ViewModels.dll
+C:\venuerp\VENUERP.ViewModels\obj\Debug\VENUERP.ViewModels.pdb

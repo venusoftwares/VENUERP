@@ -1,0 +1,5 @@
+C:\venuerp\VENUERP.Models\bin\Debug\VENUERP.Models.dll
+C:\venuerp\VENUERP.Models\bin\Debug\VENUERP.Models.pdb
+C:\venuerp\VENUERP.Models\obj\Debug\VENUERP.Models.csproj.CoreCompileInputs.cache
+C:\venuerp\VENUERP.Models\obj\Debug\VENUERP.Models.dll
+C:\venuerp\VENUERP.Models\obj\Debug\VENUERP.Models.pdb
