@@ -1,8 +1,8 @@
 C:\venuerp\VENUERP.ViewModels\bin\Debug\VENUERP.ViewModels.dll
 C:\venuerp\VENUERP.ViewModels\bin\Debug\VENUERP.ViewModels.pdb
+C:\venuerp\VENUERP.ViewModels\bin\Debug\VENUERP.Models.dll
+C:\venuerp\VENUERP.ViewModels\bin\Debug\VENUERP.Models.pdb
+C:\venuerp\VENUERP.ViewModels\obj\Debug\VENUERP.ViewModels.csprojResolveAssemblyReference.cache
 C:\venuerp\VENUERP.ViewModels\obj\Debug\VENUERP.ViewModels.csproj.CoreCompileInputs.cache
 C:\venuerp\VENUERP.ViewModels\obj\Debug\VENUERP.ViewModels.dll
 C:\venuerp\VENUERP.ViewModels\obj\Debug\VENUERP.ViewModels.pdb
-C:\venuerp\VENUERP.ViewModels\obj\Debug\VENUERP.ViewModels.csprojResolveAssemblyReference.cache
-C:\venuerp\VENUERP.ViewModels\bin\Debug\VENUERP.Models.dll
-C:\venuerp\VENUERP.ViewModels\bin\Debug\VENUERP.Models.pdb
