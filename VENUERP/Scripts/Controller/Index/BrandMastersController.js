@@ -21,25 +21,25 @@ function bindDatatable() {
         },
         "columns": [
             {
-                "data": "BrandName",
+                "data": "Brand",
                 "autoWidth": true,
                 "searchable": true
             },
             {
                 "mRender": function (data, type, row) {
-                    var linkEdit = '<a href="Edit?id=' + row.BrandId + '">Edit</a>';                    
+                    var linkEdit = '<a href="Edit?id=' + row.Id + '">Edit</a>';                    
                     return linkEdit ;
                 }
             },
             {
                 "mRender": function (data, type, row) {                   
-                    var linkView = '<a href="Details?id=' + row.BrandId + '">View</a>';                  
+                    var linkView = '<a href="Details?id=' + row.Id + '">View</a>';                  
                     return   linkView;
                 }
             },
             {
                 "mRender": function (data, type, row) {                   
-                    var linkDelete = '<a href="Delete?id=' + row.BrandId + '">Delete</a>';
+                    var linkDelete = '<a href="Delete?id=' + row.Id + '">Delete</a>';
                     return linkDelete;
                 }
             } 

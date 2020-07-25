@@ -128,7 +128,6 @@ C:\venuerp\VENUERP\bin\Microsoft.AI.DependencyCollector.xml
 C:\venuerp\VENUERP\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\venuerp\VENUERP\bin\Microsoft.AI.WindowsServer.xml
 C:\venuerp\VENUERP\bin\Microsoft.AI.Web.xml
-C:\venuerp\VENUERP\obj\Debug\VENUERP.csprojAssemblyReference.cache
-C:\venuerp\VENUERP\obj\Debug\VENUERP.csproj.CopyComplete
 C:\venuerp\VENUERP\obj\Debug\VENUERP.dll
 C:\venuerp\VENUERP\obj\Debug\VENUERP.pdb
+C:\venuerp\VENUERP\obj\Debug\VENUERP.csprojResolveAssemblyReference.cache

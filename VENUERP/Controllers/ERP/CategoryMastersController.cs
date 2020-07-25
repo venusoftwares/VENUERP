@@ -62,6 +62,7 @@ namespace VENUERP.Controllers.ERP
         {
             if (ModelState.IsValid)
             {
+                categoryMaster.ComCode = Convert.ToInt32(Session["ComCode"]);
                 db.CategoryMasters.Add(categoryMaster);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
@@ -96,6 +97,7 @@ namespace VENUERP.Controllers.ERP
         {
             if (ModelState.IsValid)
             {
+                categoryMaster.ComCode = Convert.ToInt32(Session["ComCode"]);
                 db.Entry(categoryMaster).State = EntityState.Modified;
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");

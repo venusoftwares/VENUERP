@@ -63,6 +63,7 @@ namespace VENUERP.Controllers.ERP
         {
             if (ModelState.IsValid)
             {
+                itemMaster.ComCode = Convert.ToInt32(Session["ComCode"]);
                 db.ItemMasters.Add(itemMaster);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
@@ -99,6 +100,7 @@ namespace VENUERP.Controllers.ERP
         {
             if (ModelState.IsValid)
             {
+                itemMaster.ComCode = Convert.ToInt32(Session["ComCode"]);
                 db.Entry(itemMaster).State = EntityState.Modified;
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");

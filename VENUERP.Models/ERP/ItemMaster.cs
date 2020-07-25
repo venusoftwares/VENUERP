@@ -2,6 +2,7 @@ namespace VENUERP.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
@@ -11,14 +12,14 @@ namespace VENUERP.Models
     {
         [Key]
         public int ItemId { get; set; }
-
+        [DisplayName("Hsn")]
         [Required]
         public string Dimension { get; set; }
-
+        [DisplayName("Brand")]
         public int BrandId { get; set; }
-
+        [DisplayName("Category")]
         public int CategoryId { get; set; }
-
+        [DisplayName("Item")]
         [Required]
         public string Description { get; set; }
 

@@ -11,6 +11,7 @@ using System.Web.Mvc;
 using VENUERP.Models;
 using VENUERP.Repository.Interface;
 using VENUERP.Repository.Repository;
+using VENUERP.ViewModels.ERP;
 using VENUERP.ViewModels.JQUERYDATATABLES;
 
 namespace VENUERP.Controllers.ERP
@@ -59,6 +60,7 @@ namespace VENUERP.Controllers.ERP
         {
             if (ModelState.IsValid)
             {
+                brandMaster.ComCode = Convert.ToInt32(Session["ComCode"]);
                 db.BrandMasters.Add(brandMaster);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
@@ -91,6 +93,7 @@ namespace VENUERP.Controllers.ERP
         {
             if (ModelState.IsValid)
             {
+                brandMaster.ComCode = Convert.ToInt32(Session["ComCode"]);
                 db.Entry(brandMaster).State = EntityState.Modified;
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
@@ -138,17 +141,17 @@ namespace VENUERP.Controllers.ERP
             var employees = _brandMaster.GetBrandMasterDetails(); //This method is returning the IEnumerable employee from database 
             if (!string.IsNullOrEmpty(param.sSearch))
             {
-                employees = employees.Where(x => x.BrandName.ToLower().Contains(param.sSearch.ToLower())).ToList();
+                employees = employees.Where(x => x.Brand.ToLower().Contains(param.sSearch.ToLower())).ToList();
             }
             var sortColumnIndex = Convert.ToInt32(HttpContext.Request.QueryString["iSortCol_0"]);
             var sortDirection = HttpContext.Request.QueryString["sSortDir_0"];
             if (sortColumnIndex == 3)
             {
-                employees = sortDirection == "asc" ? employees.OrderBy(c => c.BrandName) : employees.OrderByDescending(c => c.BrandName);
+                employees = sortDirection == "asc" ? employees.OrderBy(c => c.Brand) : employees.OrderByDescending(c => c.Brand);
             }
             else
             {
-                Func<BrandMaster, string> orderingFunction = e => sortColumnIndex == 0 ? e.BrandName : e.BrandName;
+                Func<BrandMasterViewModel, string> orderingFunction = e => sortColumnIndex == 0 ? e.Brand : e.Brand;
                 employees = sortDirection == "asc" ? employees.OrderBy(orderingFunction) : employees.OrderByDescending(orderingFunction);
             }
             var displayResult = employees.Skip(param.iDisplayStart)

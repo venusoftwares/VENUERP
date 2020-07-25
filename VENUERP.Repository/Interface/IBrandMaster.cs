@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VENUERP.Models;
+using VENUERP.ViewModels.ERP;
 
 namespace VENUERP.Repository.Interface
 {
     public interface IBrandMaster
     {
-        IEnumerable<BrandMaster> GetBrandMasterDetails();
+        IEnumerable<BrandMasterViewModel> GetBrandMasterDetails();
     }
 }
