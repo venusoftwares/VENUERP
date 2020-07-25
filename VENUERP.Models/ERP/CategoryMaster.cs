@@ -19,6 +19,7 @@ namespace VENUERP.Models
 
         public int? ComCode { get; set; }
 
-        public virtual BrandMaster BrandMaster { get; set; }
+        
+        public  virtual BrandMaster BrandMaster { get; set; }
     }
 }

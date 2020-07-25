@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ERP\CategoryMasterViewModel.cs" />
+    <Compile Include="ERP\ItemMasterViewModel.cs" />
+    <Compile Include="JQUERYDATATABLES\JqueryDatatableParam.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

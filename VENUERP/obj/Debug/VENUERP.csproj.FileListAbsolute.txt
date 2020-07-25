@@ -4,6 +4,7 @@ C:\venuerp\VENUERP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
 C:\venuerp\VENUERP\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
 C:\venuerp\VENUERP\bin\roslyn\System.IO.Compression.dll
 C:\venuerp\VENUERP\bin\roslyn\VBCSCompiler.exe
+C:\venuerp\VENUERP\obj\Debug\VENUERP.csproj.CoreCompileInputs.cache
 C:\venuerp\VENUERP\bin\ApplicationInsights.config
 C:\venuerp\VENUERP\bin\roslyn\csc.exe
 C:\venuerp\VENUERP\bin\roslyn\csc.exe.config
@@ -127,7 +128,7 @@ C:\venuerp\VENUERP\bin\Microsoft.AI.DependencyCollector.xml
 C:\venuerp\VENUERP\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\venuerp\VENUERP\bin\Microsoft.AI.WindowsServer.xml
 C:\venuerp\VENUERP\bin\Microsoft.AI.Web.xml
-C:\venuerp\VENUERP\obj\Debug\VENUERP.csprojResolveAssemblyReference.cache
-C:\venuerp\VENUERP\obj\Debug\VENUERP.csproj.CoreCompileInputs.cache
+C:\venuerp\VENUERP\obj\Debug\VENUERP.csprojAssemblyReference.cache
+C:\venuerp\VENUERP\obj\Debug\VENUERP.csproj.CopyComplete
 C:\venuerp\VENUERP\obj\Debug\VENUERP.dll
 C:\venuerp\VENUERP\obj\Debug\VENUERP.pdb

@@ -44,5 +44,9 @@ namespace VENUERP.Models
 
         [Column(TypeName = "numeric")]
         public decimal? SIGSTRate { get; set; }
+
+        public virtual  BrandMaster BrandMaster { get; set; }
+        public virtual  CategoryMaster CategoryMaster { get; set; } 
+
     }
 }

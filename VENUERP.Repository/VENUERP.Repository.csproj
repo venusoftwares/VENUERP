@@ -31,8 +31,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,13 +54,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interface\IBrandMaster.cs" />
+    <Compile Include="Interface\ICategoryMasters.cs" />
+    <Compile Include="Interface\IItemMasters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\BrandMasterRepository.cs" />
+    <Compile Include="Repository\CategoryMastersRepository.cs" />
+    <Compile Include="Repository\ItemMastersRepository.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\VENUERP.Models\VENUERP.Models.csproj">
+      <Project>{841e4023-cba5-4368-8c36-52f5fa178c98}</Project>
+      <Name>VENUERP.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\VENUERP.ViewModels\VENUERP.ViewModels.csproj">
       <Project>{30e4bc2a-348b-44d7-a334-ea5c92c2835e}</Project>
       <Name>VENUERP.ViewModels</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

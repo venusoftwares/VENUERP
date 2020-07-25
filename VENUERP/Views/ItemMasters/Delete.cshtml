@@ -1,0 +1,121 @@
+﻿@model VENUERP.Models.ItemMaster
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ItemMaster</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BrandMaster.BrandName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BrandMaster.BrandName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CategoryMaster.CategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategoryMaster.CategoryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dimension)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dimension)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ComCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SCGST)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SCGST)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SCGSTRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SCGSTRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SSGST)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SSGST)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SSGSTRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SSGSTRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SIGST)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SIGST)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SIGSTRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SIGSTRate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

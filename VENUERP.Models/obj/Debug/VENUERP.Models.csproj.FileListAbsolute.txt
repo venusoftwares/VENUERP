@@ -5,5 +5,6 @@ C:\venuerp\VENUERP.Models\bin\Debug\EntityFramework.SqlServer.dll
 C:\venuerp\VENUERP.Models\bin\Debug\EntityFramework.xml
 C:\venuerp\VENUERP.Models\bin\Debug\EntityFramework.SqlServer.xml
 C:\venuerp\VENUERP.Models\obj\Debug\VENUERP.Models.csproj.CoreCompileInputs.cache
+C:\venuerp\VENUERP.Models\obj\Debug\VENUERP.Models.csproj.CopyComplete
 C:\venuerp\VENUERP.Models\obj\Debug\VENUERP.Models.dll
 C:\venuerp\VENUERP.Models\obj\Debug\VENUERP.Models.pdb
