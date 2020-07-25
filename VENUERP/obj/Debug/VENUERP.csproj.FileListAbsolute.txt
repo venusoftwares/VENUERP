@@ -122,7 +122,6 @@ C:\venuerp\VENUERP\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\venuerp\VENUERP\bin\Microsoft.AI.WindowsServer.xml
 C:\venuerp\VENUERP\bin\Microsoft.AI.Web.xml
 C:\venuerp\VENUERP\obj\Debug\VENUERP.csproj.CoreCompileInputs.cache
-C:\venuerp\VENUERP\obj\Debug\VENUERP.csproj.CopyComplete
 C:\venuerp\VENUERP\obj\Debug\VENUERP.dll
 C:\venuerp\VENUERP\obj\Debug\VENUERP.pdb
 C:\venuerp\VENUERP\bin\VENUERP.Models.dll
@@ -131,4 +130,4 @@ C:\venuerp\VENUERP\bin\VENUERP.ViewModels.dll
 C:\venuerp\VENUERP\bin\VENUERP.Models.pdb
 C:\venuerp\VENUERP\bin\VENUERP.Repository.pdb
 C:\venuerp\VENUERP\bin\VENUERP.ViewModels.pdb
-C:\venuerp\VENUERP\obj\Debug\VENUERP.csprojAssemblyReference.cache
+C:\venuerp\VENUERP\obj\Debug\VENUERP.csprojResolveAssemblyReference.cache

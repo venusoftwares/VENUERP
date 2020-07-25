@@ -2,8 +2,7 @@ C:\venuerp\VENUERP.Repository\bin\Debug\VENUERP.Repository.dll
 C:\venuerp\VENUERP.Repository\bin\Debug\VENUERP.Repository.pdb
 C:\venuerp\VENUERP.Repository\bin\Debug\VENUERP.ViewModels.dll
 C:\venuerp\VENUERP.Repository\bin\Debug\VENUERP.ViewModels.pdb
-C:\venuerp\VENUERP.Repository\obj\Debug\VENUERP.Repository.csprojAssemblyReference.cache
 C:\venuerp\VENUERP.Repository\obj\Debug\VENUERP.Repository.csproj.CoreCompileInputs.cache
-C:\venuerp\VENUERP.Repository\obj\Debug\VENUERP.Repository.csproj.CopyComplete
 C:\venuerp\VENUERP.Repository\obj\Debug\VENUERP.Repository.dll
 C:\venuerp\VENUERP.Repository\obj\Debug\VENUERP.Repository.pdb
+C:\venuerp\VENUERP.Repository\obj\Debug\VENUERP.Repository.csprojResolveAssemblyReference.cache

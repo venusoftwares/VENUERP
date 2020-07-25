@@ -21,7 +21,7 @@ namespace VENUERP.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("DatabaseContext", throwIfV1Schema: false)
         {
         }
         

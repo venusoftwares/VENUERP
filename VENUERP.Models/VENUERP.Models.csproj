@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>841e4023-cba5-4368-8c36-52f5fa178c98</ProjectGuid>
+    <ProjectGuid>{841E4023-CBA5-4368-8C36-52F5FA178C98}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>VENUERP.Models</RootNamespace>
@@ -31,24 +31,50 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="ERP\BankMaster.cs" />
+    <Compile Include="ERP\BrandMaster.cs" />
+    <Compile Include="ERP\CashMaster.cs" />
+    <Compile Include="ERP\CategoryMaster.cs" />
+    <Compile Include="ERP\CompanyMaster.cs" />
+    <Compile Include="ERP\CustomerMaster.cs" />
+    <Compile Include="ERP\Employee.cs" />
+    <Compile Include="ERP\IQuotationDetailItem.cs" />
+    <Compile Include="ERP\IQuotationMaster.cs" />
+    <Compile Include="ERP\ISalesDetailItem.cs" />
+    <Compile Include="ERP\ISalesMaster.cs" />
+    <Compile Include="ERP\ItemMaster.cs" />
+    <Compile Include="ERP\License.cs" />
+    <Compile Include="ERP\Login.cs" />
+    <Compile Include="ERP\PurchaseItemDetail.cs" />
+    <Compile Include="ERP\PurchaseMaster.cs" />
+    <Compile Include="ERP\PurchaseReturnItemDetail.cs" />
+    <Compile Include="ERP\PurchaseReturnMaster.cs" />
+    <Compile Include="ERP\QuotationDetailItem.cs" />
+    <Compile Include="ERP\QuotationMaster.cs" />
+    <Compile Include="ERP\ReportViewTable.cs" />
+    <Compile Include="ERP\SalesDetailItem.cs" />
+    <Compile Include="ERP\SalesMaster.cs" />
+    <Compile Include="ERP\SalesReturnDetailItem.cs" />
+    <Compile Include="ERP\SalesReturnMaster.cs" />
+    <Compile Include="ERP\SupplierMaster.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>
