@@ -291,12 +291,16 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\COMMON\CascadingController.cs" />
     <Compile Include="Controllers\CRYSTALREPORT\CrystalReportPdfResult.cs" />
+    <Compile Include="Controllers\MASTER\BankMastersController.cs" />
+    <Compile Include="Controllers\MASTER\CompanyMastersController.cs" />
     <Compile Include="Controllers\MASTER\CustomerMastersController.cs" />
     <Compile Include="Controllers\MASTER\BrandMastersController.cs" />
     <Compile Include="Controllers\MASTER\CategoryMastersController.cs" />
     <Compile Include="Controllers\MASTER\ItemMastersController.cs" />
     <Compile Include="Controllers\MASTER\SupplierMastersController.cs" />
     <Compile Include="Controllers\COMMON\HomeController.cs" />
+    <Compile Include="Controllers\PAYMENTS\CashPaymentController.cs" />
+    <Compile Include="Controllers\PAYMENTS\CashReceivedController.cs" />
     <Compile Include="Controllers\TRANSACTION\IQuotationMastersController.cs" />
     <Compile Include="Controllers\TRANSACTION\ISalesMastersController.cs" />
     <Compile Include="Controllers\TRANSACTION\PurchaseMastersController.cs" />
@@ -1006,9 +1010,25 @@
     <Content Include="Views\PurchaseMasters\Edit.cshtml" />
     <Content Include="Views\PurchaseMasters\Index.cshtml" />
     <Content Include="Views\PurchaseMasters\_PurchaseItem.cshtml" />
+    <Content Include="Views\CompanyMasters\Create.cshtml" />
+    <Content Include="Views\CompanyMasters\Delete.cshtml" />
+    <Content Include="Views\CompanyMasters\Details.cshtml" />
+    <Content Include="Views\CompanyMasters\Edit.cshtml" />
+    <Content Include="Views\CompanyMasters\Index.cshtml" />
+    <Content Include="Views\CashPayment\Create.cshtml" />
+    <Content Include="Views\CashPayment\Delete.cshtml" />
+    <Content Include="Views\CashPayment\Details.cshtml" />
+    <Content Include="Views\CashPayment\Edit.cshtml" />
+    <Content Include="Views\CashPayment\Index.cshtml" />
+    <Content Include="Views\CashReceived\Create.cshtml" />
+    <Content Include="Views\CashReceived\Delete.cshtml" />
+    <Content Include="Views\CashReceived\Details.cshtml" />
+    <Content Include="Views\CashReceived\Edit.cshtml" />
+    <Content Include="Views\CashReceived\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\BankMasters\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -1055,7 +1075,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>51665</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:51665/</IISUrl>
+          <IISUrl>http://localhost:51950/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -12,9 +12,11 @@ using VENUERP.ViewModels.JQUERYDATATABLES;
 using VENUERP.Repository.Interface;
 using VENUERP.Repository.Repository;
 using VENUERP.ViewModels.ERP;
+using VENUERP.Providers;
 
 namespace VENUERP.Controllers.ERP
 {
+    [Authentication]
     public class CustomerMastersController : Controller
     {
         private DatabaseContext db = new DatabaseContext();

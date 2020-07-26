@@ -27,7 +27,8 @@ namespace VENUERP.Controllers
             dashboardViewModel.TotalPurchase = db.PurchaseMasters.Count();
 
 
-
+            dashboardViewModel.TotalCashPayment = db.CashMasters.Where(x => x.Nature == "Payment").Sum(x => x.Amount); 
+            dashboardViewModel.TotalCashReceived = db.CashMasters.Where(x => x.Nature == "Receipt").Sum(x => x.Amount);
             dashboardViewModel.TodayTotalQuotationAmount = db.IQuotationMaster.Sum(x => x.GrandTotal);
             dashboardViewModel.TodayTotalSalesAmount = db.ISalesMaster.Sum(x => x.GrandTotal);
             dashboardViewModel.TodayTotalPurchases = db.PurchaseMasters.Sum(x => x.GrandTotal);

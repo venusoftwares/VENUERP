@@ -19,17 +19,22 @@ namespace VENUERP.Models
         public string Nature { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime? Date { get; set; }
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}", ApplyFormatInEditMode = true)]
+        public DateTime Date { get; set; }
 
         public int? CustomerId { get; set; }
 
         public int? SupplierID { get; set; }
 
         public decimal? Amount { get; set; }
+        public int? ComCode { get; set; }
+
 
         [StringLength(50)]
         public string Description { get; set; }
 
-        public int? ComCode { get; set; }
+        public SupplierMaster SupplierMaster { get; set; }
+        public CustomerMaster CustomerMaster { get; set; }
     }
 }
