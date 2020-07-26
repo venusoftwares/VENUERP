@@ -12,7 +12,8 @@ namespace VENUERP.Models
         [Key]
         public int PurchaseDetailID { get; set; }
 
-        public int? PurchaseID { get; set; }
+
+        public int PurchaseID { get; set; }
 
         public int? ItemID { get; set; }
 
@@ -28,6 +29,12 @@ namespace VENUERP.Models
         public decimal? Rate { get; set; }
 
         public decimal? Amount { get; set; }
+
+        public BrandMaster brandMaster { get; set; }
+
+        public CategoryMaster CategoryMaster { get; set; }
+
+        public ItemMaster ItemMaster { get; set; }
 
         public int? ComCode { get; set; }
     }

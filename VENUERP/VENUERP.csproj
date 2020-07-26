@@ -299,6 +299,7 @@
     <Compile Include="Controllers\COMMON\HomeController.cs" />
     <Compile Include="Controllers\TRANSACTION\IQuotationMastersController.cs" />
     <Compile Include="Controllers\TRANSACTION\ISalesMastersController.cs" />
+    <Compile Include="Controllers\TRANSACTION\PurchaseMastersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -935,6 +936,7 @@
     <Content Include="Scripts\Controller\MASTER\SupplierMastersController.js" />
     <Content Include="Scripts\Controller\TRANSACTION\IQuotationMastersController.js" />
     <Content Include="Scripts\Controller\TRANSACTION\ISalesMastersController.js" />
+    <Content Include="Scripts\Controller\TRANSACTION\PurchaseMastersController.js" />
     <Content Include="Scripts\DATATABLES\dataTables.bootstrap.min.js" />
     <Content Include="Scripts\DATATABLES\jquery.dataTables.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -998,6 +1000,12 @@
     <Content Include="Views\ISalesMasters\Index.cshtml" />
     <Content Include="Views\ISalesMasters\SendMail.cshtml" />
     <Content Include="Views\ISalesMasters\_QuotationItem.cshtml" />
+    <Content Include="Views\PurchaseMasters\Create.cshtml" />
+    <Content Include="Views\PurchaseMasters\Delete.cshtml" />
+    <Content Include="Views\PurchaseMasters\Details.cshtml" />
+    <Content Include="Views\PurchaseMasters\Edit.cshtml" />
+    <Content Include="Views\PurchaseMasters\Index.cshtml" />
+    <Content Include="Views\PurchaseMasters\_PurchaseItem.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

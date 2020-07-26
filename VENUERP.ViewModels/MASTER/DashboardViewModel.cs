@@ -15,10 +15,13 @@ namespace VENUERP.ViewModels.ERP
         public int TotalSuppliers { get; set; }
         public int TotalQuotation { get; set; }
         public int TotalSales { get; set; }
+        public int TotalPurchase { get; set; }
 
         public decimal? TodayTotalQuotationAmount { get; set; }
         public decimal? TodayTotalSalesAmount { get; set; }
         public decimal? TodayTotalPurchases { get; set; }
+       
+
 
 
     }

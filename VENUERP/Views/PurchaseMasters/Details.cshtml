@@ -1,0 +1,123 @@
+﻿@model VENUERP.Models.PurchaseMaster
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PurchaseMaster</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplierMaster.SupplierName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupplierMaster.SupplierName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PurchaseDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PurchaseDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InvoiceNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InvoiceNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsCash)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsCash)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CGSTAmt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CGSTAmt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CGSTRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CGSTRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SGSTAmt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SGSTAmt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SGSTRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SGSTRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IGSTRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IGSTRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IGSTAmt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IGSTAmt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaxableAmt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaxableAmt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalGST)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalGST)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GrandTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GrandTotal)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PurchaseID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

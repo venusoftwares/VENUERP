@@ -62,6 +62,7 @@
     <Compile Include="Interface\ISupplierMasters.cs" />
     <Compile Include="Interface\TRANSACTION\IIQuotationMasters.cs" />
     <Compile Include="Interface\TRANSACTION\IISalesMaster.cs" />
+    <Compile Include="Interface\TRANSACTION\IPurchaseMasters.cs" />
     <Compile Include="Interface\TRANSACTION\ISQLStored.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BrandMasterRepository.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Repository\SupplierMastersRepository.cs" />
     <Compile Include="Repository\TRANSACTION\IQuotationMastersRepository.cs" />
     <Compile Include="Repository\TRANSACTION\ISalesMastersRepository.cs" />
+    <Compile Include="Repository\TRANSACTION\PurchaseMastersRepository.cs" />
     <Compile Include="Repository\TRANSACTION\SQLStoredProcedure.cs" />
   </ItemGroup>
   <ItemGroup>
