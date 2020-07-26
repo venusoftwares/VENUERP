@@ -1,9 +1,280 @@
-﻿<div class="container">
+﻿@model VENUERP.ViewModels.ERP.DashboardViewModel
+
+
+<div class="container">
     <div class="row">
         <div class="col-md-3">
             <div class="list-group">
 
-                <a href="http://www.jquery2dotnet.com" class="list-group-item visitor">
+                <a href="/BrandMasters/Index" class="list-group-item visitor">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-book fa  "></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                      Tot Brands:  @Model.TotalBrands
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="/CategoryMasters/Index" class="list-group-item facebook-like">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-barcode fa  "></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        Tot Category:  @Model.TotalCategories
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="/ItemMasters/Index" class="list-group-item google-plus">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-adjust fa  "></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        Tot Items:  @Model.TotalItems
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="/CustomerMasters/Index" class="list-group-item twitter">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-pencil fa"></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        Tot Customers:  @Model.TotalCustomers
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="list-group">
+
+                <a href="/SupplierMasters/Index/" class="list-group-item visitor">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-book fa  "></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        Tot Suppliers:  @Model.TotalSuppliers
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="/IQuotationMasters/Index/" class="list-group-item facebook-like">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-bell fa  "></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        Tot Quotations:  @Model.TotalQuotation
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="/IQuotationMasters/Index/" class="list-group-item google-plus">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-adjust fa  "></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        QAmount:  @Model.TodayTotalQuotationAmount
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+            </div>
+        </div>
+
+        @*<div class="col-md-3">
+            <div class="list-group">
+                <a href="#" class="list-group-item twitter">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-pencil fa"></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        1000
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+
+            </div>
+        </div>*@
+
+    </div>
+    <div class="row">
+        @*<div class="col-md-3">
+            <div class="list-group">
+
+                <a href="#" class="list-group-item visitor">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-book fa  "></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        1000
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+            </div>
+        </div>*@
+        @*<div class="col-md-3">
+            <div class="list-group">
+                <a href="#" class="list-group-item facebook-like">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-bell fa  "></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        1000
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+            </div>
+        </div>*@
+
+        <div class="col-md-3">
+            @*<div class="list-group">
+                <a href="#" class="list-group-item google-plus">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-adjust fa  "></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        1000
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+            </div>*@
+        </div>
+
+        <div class="col-md-3">
+            @*<div class="list-group">
+                <a href="#" class="list-group-item twitter">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-pencil fa"></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        1000
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+
+            </div>*@
+        </div>
+
+    </div>
+    <div class="row">
+        @*<div class="col-md-3">
+            <div class="list-group">
+
+                <a href="#" class="list-group-item visitor">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-book fa  "></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        1000
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+            </div>
+        </div>*@
+        @*<div class="col-md-3">
+            <div class="list-group">
+                <a href="#" class="list-group-item facebook-like">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-bell fa  "></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        1000
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+            </div>*@
+        </div>
+
+        <div class="col-md-3">
+            @*<div class="list-group">
+                <a href="#" class="list-group-item google-plus">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-adjust fa  "></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        1000
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+            </div>*@
+        </div>
+
+        <div class="col-md-3">
+            @*<div class="list-group">
+                <a href="#" class="list-group-item twitter">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-pencil fa"></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        1000
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+
+            </div>*@
+        </div>
+
+    </div>
+    <div class="row">
+        @*<div class="col-md-3">
+            <div class="list-group">
+
+                <a href="#" class="list-group-item visitor">
                     <h3 class="pull-right">
                         <i class="glyphicon glyphicon-book fa  "></i>
                     </h3>
@@ -18,7 +289,7 @@
         </div>
         <div class="col-md-3">
             <div class="list-group">
-                <a href="http://www.jquery2dotnet.com" class="list-group-item facebook-like">
+                <a href="#" class="list-group-item facebook-like">
                     <h3 class="pull-right">
                         <i class="glyphicon glyphicon-bell fa  "></i>
                     </h3>
@@ -30,11 +301,11 @@
                     </p>
                 </a>
             </div>
-        </div>
+        </div>*@
 
-        <div class="col-md-3">
+        @*<div class="col-md-3">
             <div class="list-group">
-                <a href="http://www.jquery2dotnet.com" class="list-group-item google-plus">
+                <a href="#" class="list-group-item google-plus">
                     <h3 class="pull-right">
                         <i class="glyphicon glyphicon-adjust fa  "></i>
                     </h3>
@@ -50,7 +321,7 @@
 
         <div class="col-md-3">
             <div class="list-group">
-                <a href="http://www.jquery2dotnet.com" class="list-group-item twitter">
+                <a href="#" class="list-group-item twitter">
                     <h3 class="pull-right">
                         <i class="glyphicon glyphicon-pencil fa"></i>
                     </h3>
@@ -63,14 +334,14 @@
                 </a>
 
             </div>
-        </div>
+        </div>*@
 
     </div>
-    <div class="row">
+    @*<div class="row">
         <div class="col-md-3">
             <div class="list-group">
 
-                <a href="http://www.jquery2dotnet.com" class="list-group-item visitor">
+                <a href="#" class="list-group-item visitor">
                     <h3 class="pull-right">
                         <i class="glyphicon glyphicon-book fa  "></i>
                     </h3>
@@ -85,7 +356,7 @@
         </div>
         <div class="col-md-3">
             <div class="list-group">
-                <a href="http://www.jquery2dotnet.com" class="list-group-item facebook-like">
+                <a href="#" class="list-group-item facebook-like">
                     <h3 class="pull-right">
                         <i class="glyphicon glyphicon-bell fa  "></i>
                     </h3>
@@ -101,7 +372,7 @@
 
         <div class="col-md-3">
             <div class="list-group">
-                <a href="http://www.jquery2dotnet.com" class="list-group-item google-plus">
+                <a href="#" class="list-group-item google-plus">
                     <h3 class="pull-right">
                         <i class="glyphicon glyphicon-adjust fa  "></i>
                     </h3>
@@ -117,7 +388,7 @@
 
         <div class="col-md-3">
             <div class="list-group">
-                <a href="http://www.jquery2dotnet.com" class="list-group-item twitter">
+                <a href="#" class="list-group-item twitter">
                     <h3 class="pull-right">
                         <i class="glyphicon glyphicon-pencil fa"></i>
                     </h3>
@@ -132,275 +403,7 @@
             </div>
         </div>
 
-    </div>
-    <div class="row">
-        <div class="col-md-3">
-            <div class="list-group">
-
-                <a href="http://www.jquery2dotnet.com" class="list-group-item visitor">
-                    <h3 class="pull-right">
-                        <i class="glyphicon glyphicon-book fa  "></i>
-                    </h3>
-                    <h4 class="list-group-item-heading count">
-                        1000
-                    </h4>
-                    <p class="list-group-item-text">
-                        Views Details..!
-                    </p>
-                </a>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="list-group">
-                <a href="http://www.jquery2dotnet.com" class="list-group-item facebook-like">
-                    <h3 class="pull-right">
-                        <i class="glyphicon glyphicon-bell fa  "></i>
-                    </h3>
-                    <h4 class="list-group-item-heading count">
-                        1000
-                    </h4>
-                    <p class="list-group-item-text">
-                        Views Details..!
-                    </p>
-                </a>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="list-group">
-                <a href="http://www.jquery2dotnet.com" class="list-group-item google-plus">
-                    <h3 class="pull-right">
-                        <i class="glyphicon glyphicon-adjust fa  "></i>
-                    </h3>
-                    <h4 class="list-group-item-heading count">
-                        1000
-                    </h4>
-                    <p class="list-group-item-text">
-                        Views Details..!
-                    </p>
-                </a>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="list-group">
-                <a href="http://www.jquery2dotnet.com" class="list-group-item twitter">
-                    <h3 class="pull-right">
-                        <i class="glyphicon glyphicon-pencil fa"></i>
-                    </h3>
-                    <h4 class="list-group-item-heading count">
-                        1000
-                    </h4>
-                    <p class="list-group-item-text">
-                        Views Details..!
-                    </p>
-                </a>
-
-            </div>
-        </div>
-
-    </div>
-    <div class="row">
-        <div class="col-md-3">
-            <div class="list-group">
-
-                <a href="http://www.jquery2dotnet.com" class="list-group-item visitor">
-                    <h3 class="pull-right">
-                        <i class="glyphicon glyphicon-book fa  "></i>
-                    </h3>
-                    <h4 class="list-group-item-heading count">
-                        1000
-                    </h4>
-                    <p class="list-group-item-text">
-                        Views Details..!
-                    </p>
-                </a>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="list-group">
-                <a href="http://www.jquery2dotnet.com" class="list-group-item facebook-like">
-                    <h3 class="pull-right">
-                        <i class="glyphicon glyphicon-bell fa  "></i>
-                    </h3>
-                    <h4 class="list-group-item-heading count">
-                        1000
-                    </h4>
-                    <p class="list-group-item-text">
-                        Views Details..!
-                    </p>
-                </a>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="list-group">
-                <a href="http://www.jquery2dotnet.com" class="list-group-item google-plus">
-                    <h3 class="pull-right">
-                        <i class="glyphicon glyphicon-adjust fa  "></i>
-                    </h3>
-                    <h4 class="list-group-item-heading count">
-                        1000
-                    </h4>
-                    <p class="list-group-item-text">
-                        Views Details..!
-                    </p>
-                </a>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="list-group">
-                <a href="http://www.jquery2dotnet.com" class="list-group-item twitter">
-                    <h3 class="pull-right">
-                        <i class="glyphicon glyphicon-pencil fa"></i>
-                    </h3>
-                    <h4 class="list-group-item-heading count">
-                        1000
-                    </h4>
-                    <p class="list-group-item-text">
-                        Views Details..!
-                    </p>
-                </a>
-
-            </div>
-        </div>
-
-    </div>
-    <div class="row">
-        <div class="col-md-3">
-            <div class="list-group">
-
-                <a href="http://www.jquery2dotnet.com" class="list-group-item visitor">
-                    <h3 class="pull-right">
-                        <i class="glyphicon glyphicon-book fa  "></i>
-                    </h3>
-                    <h4 class="list-group-item-heading count">
-                        1000
-                    </h4>
-                    <p class="list-group-item-text">
-                        Views Details..!
-                    </p>
-                </a>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="list-group">
-                <a href="http://www.jquery2dotnet.com" class="list-group-item facebook-like">
-                    <h3 class="pull-right">
-                        <i class="glyphicon glyphicon-bell fa  "></i>
-                    </h3>
-                    <h4 class="list-group-item-heading count">
-                        1000
-                    </h4>
-                    <p class="list-group-item-text">
-                        Views Details..!
-                    </p>
-                </a>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="list-group">
-                <a href="http://www.jquery2dotnet.com" class="list-group-item google-plus">
-                    <h3 class="pull-right">
-                        <i class="glyphicon glyphicon-adjust fa  "></i>
-                    </h3>
-                    <h4 class="list-group-item-heading count">
-                        1000
-                    </h4>
-                    <p class="list-group-item-text">
-                        Views Details..!
-                    </p>
-                </a>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="list-group">
-                <a href="http://www.jquery2dotnet.com" class="list-group-item twitter">
-                    <h3 class="pull-right">
-                        <i class="glyphicon glyphicon-pencil fa"></i>
-                    </h3>
-                    <h4 class="list-group-item-heading count">
-                        1000
-                    </h4>
-                    <p class="list-group-item-text">
-                        Views Details..!
-                    </p>
-                </a>
-
-            </div>
-        </div>
-
-    </div>
-    <div class="row">
-        <div class="col-md-3">
-            <div class="list-group">
-
-                <a href="http://www.jquery2dotnet.com" class="list-group-item visitor">
-                    <h3 class="pull-right">
-                        <i class="glyphicon glyphicon-book fa  "></i>
-                    </h3>
-                    <h4 class="list-group-item-heading count">
-                        1000
-                    </h4>
-                    <p class="list-group-item-text">
-                        Views Details..!
-                    </p>
-                </a>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="list-group">
-                <a href="http://www.jquery2dotnet.com" class="list-group-item facebook-like">
-                    <h3 class="pull-right">
-                        <i class="glyphicon glyphicon-bell fa  "></i>
-                    </h3>
-                    <h4 class="list-group-item-heading count">
-                        1000
-                    </h4>
-                    <p class="list-group-item-text">
-                        Views Details..!
-                    </p>
-                </a>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="list-group">
-                <a href="http://www.jquery2dotnet.com" class="list-group-item google-plus">
-                    <h3 class="pull-right">
-                        <i class="glyphicon glyphicon-adjust fa  "></i>
-                    </h3>
-                    <h4 class="list-group-item-heading count">
-                        1000
-                    </h4>
-                    <p class="list-group-item-text">
-                        Views Details..!
-                    </p>
-                </a>
-            </div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="list-group">
-                <a href="http://www.jquery2dotnet.com" class="list-group-item twitter">
-                    <h3 class="pull-right">
-                        <i class="glyphicon glyphicon-pencil fa"></i>
-                    </h3>
-                    <h4 class="list-group-item-heading count">
-                        1000
-                    </h4>
-                    <p class="list-group-item-text">
-                        Views Details..!
-                    </p>
-                </a>
-
-            </div>
-        </div>
-
-    </div>
+    </div>*@
         </div>
 
 

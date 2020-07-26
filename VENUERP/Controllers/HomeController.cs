@@ -4,28 +4,42 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using VENUERP.Models;
+using VENUERP.Providers;
+using VENUERP.ViewModels.ERP;
 
 namespace VENUERP.Controllers
 {
+    
     public class HomeController : Controller
     {
         public DatabaseContext db = new DatabaseContext();
+        [Authentication]
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
+            DashboardViewModel dashboardViewModel = new DashboardViewModel();
+            dashboardViewModel.TotalBrands = db.BrandMasters.Count();
+            dashboardViewModel.TotalCategories = db.CategoryMasters.Count();
+            dashboardViewModel.TotalItems = db.ItemMasters.Count();
+            dashboardViewModel.TotalCustomers = db.CustomerMasters.Count();
+            dashboardViewModel.TotalSuppliers = db.SupplierMasters.Count();
+            dashboardViewModel.TotalQuotation = db.IQuotationMaster.Count();
 
-            return View();
+            dashboardViewModel.TodayTotalQuotationAmount = db.IQuotationMaster.Sum(x => x.GrandTotal);
+            ViewBag.Title = "Home Page";
+         
+
+            return View(dashboardViewModel);
         }
         public ActionResult ShowMenus()
         {
             return PartialView("_showmenu");
         }
 
-
-
-
+  
+ 
         public ActionResult Login(Login login)
         {
+            Session["ComCode"] = null;
             var aa = db.Logins.Where(x => x.Username == login.Username && x.Password == login.Password).FirstOrDefault();
             if (aa != null)
             {
@@ -45,6 +59,10 @@ namespace VENUERP.Controllers
             }
 
             return View(login);
+        }
+        public ActionResult Error()
+        {
+            return View();
         }
     }
 }

@@ -42,6 +42,7 @@
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web.Mvc">
       <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
@@ -56,11 +57,19 @@
   <ItemGroup>
     <Compile Include="Interface\IBrandMaster.cs" />
     <Compile Include="Interface\ICategoryMasters.cs" />
+    <Compile Include="Interface\ICustomerMasters.cs" />
     <Compile Include="Interface\IItemMasters.cs" />
+    <Compile Include="Interface\ISupplierMasters.cs" />
+    <Compile Include="Interface\TRANSACTION\IIQuotationMasters.cs" />
+    <Compile Include="Interface\TRANSACTION\ISQLStored.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BrandMasterRepository.cs" />
     <Compile Include="Repository\CategoryMastersRepository.cs" />
+    <Compile Include="Repository\CustomerMastersRepository.cs" />
     <Compile Include="Repository\ItemMastersRepository.cs" />
+    <Compile Include="Repository\SupplierMastersRepository.cs" />
+    <Compile Include="Repository\TRANSACTION\IQuotationMastersRepository.cs" />
+    <Compile Include="Repository\TRANSACTION\SQLStoredProcedure.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VENUERP.Models\VENUERP.Models.csproj">

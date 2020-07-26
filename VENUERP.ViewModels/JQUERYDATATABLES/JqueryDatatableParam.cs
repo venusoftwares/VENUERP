@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VENUERP.ViewModels.ERP;
 
 namespace VENUERP.ViewModels.JQUERYDATATABLES
 {
     public class JqueryDatatableParam
     {
+       
+
         public string sEcho { get; set; }
         public string sSearch { get; set; }
         public int iDisplayLength { get; set; }
@@ -17,5 +20,6 @@ namespace VENUERP.ViewModels.JQUERYDATATABLES
         public string sSortDir_0 { get; set; }
         public int iSortingCols { get; set; }
         public string sColumns { get; set; }
+ 
     }
 }

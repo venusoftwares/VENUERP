@@ -40,7 +40,7 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
+                     
                 </ul>
             </div>
         </div>
@@ -64,11 +64,17 @@
 
     <script src="~/Scripts/DATATABLES/jquery.dataTables.min.js"></script>
     <script src="~/Scripts/DATATABLES/dataTables.bootstrap.min.js"></script>
+  
+    <script src="~/Scripts/Controller/MASTER/BrandMastersController.js"></script>
 
-    <script src="~/Scripts/Controller/Index/EmployeeController.js"></script>
-    <script src="~/Scripts/Controller/Index/BrandMastersController.js"></script>
-    <script src="~/Scripts/Controller/Index/CategoryMastersController.js"></script>
-    <script src="~/Scripts/Controller/Index/ItemMastersController.js"></script>
+    <script src="~/Scripts/Controller/MASTER/CategoryMastersController.js"></script>
+    <script src="~/Scripts/Controller/MASTER/CustomerMastersController.js"></script>
+    <script src="~/Scripts/Controller/MASTER/EmployeeController.js"></script>
+    <script src="~/Scripts/Controller/MASTER/ItemMastersController.js"></script>
+    <script src="~/Scripts/Controller/MASTER/SupplierMastersController.js"></script>
+
+    <script src="~/Scripts/Controller/TRANSACTION/IQuotationMastersController.js"></script>
+
     @*@Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/bootstrap")
         @RenderSection("scripts", required: false)*@

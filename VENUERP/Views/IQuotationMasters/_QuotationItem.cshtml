@@ -1,0 +1,117 @@
+﻿@model IEnumerable<VENUERP.Models.IQuotationDetailItem>
+@{
+    decimal? a = 0;
+    foreach (var i in Model)
+    {
+        a = a + i.Amount;
+    }
+
+
+}
+<script>
+
+</script>
+
+<input type="hidden" id="IQuotationTot" value="@a" />
+
+<div style="border:2px solid #3b0c31;">
+    <table>
+        <thead>
+            <tr style="background-color:brown;color:wheat">
+                <th>
+                    @Html.DisplayNameFor(model => model.ItemMaster.Dimension)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ItemMaster.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SizeW)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SizeH)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TotSize)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Quantity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Rate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Amount)
+                </th>
+
+                <th> </th>
+            </tr>
+        </thead>
+        <tbody style="display: block;height:150px; overflow: auto;">
+            @foreach (var item in Model)
+            {
+
+                <tr>
+                    <td>
+
+                        @Html.DisplayFor(modelItem => item.ItemMaster.Dimension)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ItemMaster.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SizeW)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SizeH)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TotSize)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Quantity)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Rate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Amount)
+                    </td>
+                    <td>
+                        @*<a href="/PurchaseMasters/Edit/@item.PurchaseDetailID">
+                                <span class="glyphicon glyphicon-pencil" style="color:blue"></span>
+                            </a>|
+                            <a href="/PurchaseMasters/Details/@item.PurchaseDetailID">
+                                <span class="glyphicon glyphicon-eye-open" style="color:green"></span>
+                            </a>|*@
+                        <a href="/IQuotationMasters/DeletePartial/@item.IQuotationDetailID">
+                            <span class="glyphicon glyphicon-remove" style="color:red"></span>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+
+
+<style>
+    table {
+        border: 1px solid black;
+        width: 100%;
+    }
+
+    th,
+    td {
+        width: 300px;
+        border: 1px solid black;
+    }
+
+    thead > tr {
+        position: relative;
+        display: block;
+    }
+</style>
+
+ 
