@@ -11,8 +11,9 @@ namespace VENUERP.Models
     {
         [Key]
         public int ISalesID { get; set; }
-
         [Column(TypeName = "date")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}", ApplyFormatInEditMode = true)]
         public DateTime ISalesDate { get; set; }
 
         [StringLength(50)]
@@ -42,5 +43,6 @@ namespace VENUERP.Models
         public decimal? GrandTotal { get; set; }
 
         public int? ComCode { get; set; }
+        public CustomerMaster CustomerMaster { get; set; }
     }
 }

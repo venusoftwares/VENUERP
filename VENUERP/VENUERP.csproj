@@ -296,9 +296,9 @@
     <Compile Include="Controllers\MASTER\CategoryMastersController.cs" />
     <Compile Include="Controllers\MASTER\ItemMastersController.cs" />
     <Compile Include="Controllers\MASTER\SupplierMastersController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\COMMON\HomeController.cs" />
     <Compile Include="Controllers\TRANSACTION\IQuotationMastersController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\TRANSACTION\ISalesMastersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -934,6 +934,7 @@
     <Content Include="Scripts\Controller\MASTER\ItemMastersController.js" />
     <Content Include="Scripts\Controller\MASTER\SupplierMastersController.js" />
     <Content Include="Scripts\Controller\TRANSACTION\IQuotationMastersController.js" />
+    <Content Include="Scripts\Controller\TRANSACTION\ISalesMastersController.js" />
     <Content Include="Scripts\DATATABLES\dataTables.bootstrap.min.js" />
     <Content Include="Scripts\DATATABLES\jquery.dataTables.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -990,6 +991,13 @@
     <Content Include="Views\IQuotationMasters\Index.cshtml" />
     <Content Include="Views\IQuotationMasters\SendMail.cshtml" />
     <Content Include="Views\IQuotationMasters\_QuotationItem.cshtml" />
+    <Content Include="Views\ISalesMasters\Create.cshtml" />
+    <Content Include="Views\ISalesMasters\Delete.cshtml" />
+    <Content Include="Views\ISalesMasters\Details.cshtml" />
+    <Content Include="Views\ISalesMasters\Edit.cshtml" />
+    <Content Include="Views\ISalesMasters\Index.cshtml" />
+    <Content Include="Views\ISalesMasters\SendMail.cshtml" />
+    <Content Include="Views\ISalesMasters\_QuotationItem.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

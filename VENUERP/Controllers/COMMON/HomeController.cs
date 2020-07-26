@@ -23,8 +23,12 @@ namespace VENUERP.Controllers
             dashboardViewModel.TotalCustomers = db.CustomerMasters.Count();
             dashboardViewModel.TotalSuppliers = db.SupplierMasters.Count();
             dashboardViewModel.TotalQuotation = db.IQuotationMaster.Count();
+            dashboardViewModel.TotalSales = db.IQuotationMaster.Count();
+
 
             dashboardViewModel.TodayTotalQuotationAmount = db.IQuotationMaster.Sum(x => x.GrandTotal);
+            dashboardViewModel.TodayTotalSalesAmount = db.ISalesMaster.Sum(x => x.GrandTotal);
+
             ViewBag.Title = "Home Page";
          
 

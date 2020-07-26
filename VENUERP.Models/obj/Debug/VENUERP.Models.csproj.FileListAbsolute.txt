@@ -8,4 +8,3 @@ C:\venuerp\VENUERP.Models\obj\Debug\VENUERP.Models.csproj.CoreCompileInputs.cach
 C:\venuerp\VENUERP.Models\obj\Debug\VENUERP.Models.csproj.CopyComplete
 C:\venuerp\VENUERP.Models\obj\Debug\VENUERP.Models.dll
 C:\venuerp\VENUERP.Models\obj\Debug\VENUERP.Models.pdb
-C:\venuerp\VENUERP.Models\obj\Debug\VENUERP.Models.csprojAssemblyReference.cache

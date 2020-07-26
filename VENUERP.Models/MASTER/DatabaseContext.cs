@@ -21,8 +21,8 @@ namespace VENUERP.Models
         public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<IQuotationDetailItem> IQuotationDetailItem { get; set; }
         public virtual DbSet<IQuotationMaster> IQuotationMaster { get; set; }
-        public virtual DbSet<ISalesDetailItem> ISalesDetailItems { get; set; }
-        public virtual DbSet<ISalesMaster> ISalesMasters { get; set; }
+        public virtual DbSet<ISalesDetailItem> ISalesDetailItem { get; set; }
+        public virtual DbSet<ISalesMaster> ISalesMaster { get; set; }
         public virtual DbSet<ItemMaster> ItemMasters { get; set; }
         public virtual DbSet<License> Licenses { get; set; }
         public virtual DbSet<Login> Logins { get; set; }

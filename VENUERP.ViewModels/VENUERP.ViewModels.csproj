@@ -50,6 +50,8 @@
     <Compile Include="JQUERYDATATABLES\JqueryDatatableParam.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TRANSACTION\IQuotationViewModel.cs" />
+    <Compile Include="TRANSACTION\ISalesMasterViewModel.cs" />
+    <Compile Include="TRANSACTION\SalesViewModel.cs" />
     <Compile Include="TRANSACTION\QuoataionViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
