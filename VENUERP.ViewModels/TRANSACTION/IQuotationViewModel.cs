@@ -23,7 +23,7 @@ namespace VENUERP.ViewModels.TRANSACTION
         public decimal? SizeH { get; set; }
 
         public decimal? TotSize { get; set; }
-        public int Qty { get; set; }
+        public int? Qty { get; set; }
 
         public decimal? TotSqFt { get; set; }
         public decimal? Rate { get; set; }

@@ -1,0 +1,88 @@
+﻿@model IEnumerable<VENUERP.Models.BankMaster>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BANK)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ACCOUNTNO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IFSCCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HOLDERNAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaymentTerm1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaymentTerm2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaymentTerm3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ComCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BANK)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ACCOUNTNO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IFSCCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HOLDERNAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PaymentTerm1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PaymentTerm2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PaymentTerm3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ComCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.BankSno }) |
+            @Html.ActionLink("Details", "Details", new { id=item.BankSno }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.BankSno })
+        </td>
+    </tr>
+}
+
+</table>

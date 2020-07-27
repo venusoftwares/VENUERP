@@ -17,7 +17,7 @@ namespace VENUERP.ViewModels
         public int ItemID { get; set; }
 
         public int SupplierId { get; set; } 
-        public int Qty { get; set; } 
+        public int? Qty { get; set; } 
         public decimal? Rate { get; set; } 
         public decimal? Amount { get; set; }
 

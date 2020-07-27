@@ -1,0 +1,99 @@
+﻿@model VENUERP.Models.BankMaster
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BankMaster</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BANK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BANK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ACCOUNTNO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ACCOUNTNO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IFSCCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IFSCCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HOLDERNAME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOLDERNAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentTerm1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaymentTerm1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentTerm2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaymentTerm2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentTerm3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaymentTerm3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ComCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BankSno }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

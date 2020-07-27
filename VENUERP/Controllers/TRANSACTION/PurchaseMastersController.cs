@@ -23,7 +23,7 @@ namespace VENUERP.Controllers
     [Authentication]
     public class PurchaseMastersController : Controller
     {
-        private DatabaseContext db = new DatabaseContext();
+        private readonly DatabaseContext db = new DatabaseContext();
         private readonly ISQLStored _sQLStored;
         private readonly IPurchaseMasters _purchaseMasters;
         public PurchaseMastersController()

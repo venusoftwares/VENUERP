@@ -26,8 +26,7 @@ namespace VENUERP.Controllers.TRAMSACTION
     [Authentication]
     public class IQuotationMastersController : Controller
     {
-        private DatabaseContext db = new DatabaseContext();
-        private byte[] _contentBytes;
+        private readonly DatabaseContext db = new DatabaseContext();       
         private readonly ISQLStored _sQLStored;
         private readonly IIQuotationMasters _iQuotationMasters;
 

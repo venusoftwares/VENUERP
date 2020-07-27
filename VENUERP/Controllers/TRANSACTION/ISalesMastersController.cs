@@ -27,8 +27,7 @@ namespace VENUERP.Controllers
     [Authentication]
     public class ISalesMastersController : Controller
     {
-        private DatabaseContext db = new DatabaseContext();
-        private byte[] _contentBytes;
+        private readonly DatabaseContext db = new DatabaseContext();       
         private readonly ISQLStored _sQLStored;
         private readonly IISalesMaster _iSalesMaster;
         public ISalesMastersController()

@@ -1027,10 +1027,15 @@
     <Content Include="Views\CashReceived\Details.cshtml" />
     <Content Include="Views\CashReceived\Edit.cshtml" />
     <Content Include="Views\CashReceived\Index.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\BankMasters\Index.cshtml" />
+    <Content Include="Views\BankMasters\Details.cshtml" />
+    <Content Include="Views\BankMasters\Create.cshtml" />
+    <Content Include="Views\BankMasters\Edit.cshtml" />
+    <Content Include="Views\BankMasters\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\BankMasters\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

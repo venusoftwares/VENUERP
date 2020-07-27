@@ -13,8 +13,8 @@
     <a href="/ItemMasters/Index">ITEM MASTER</a>
     <a href="/SupplierMasters/Index">SUPPLIER MASTER</a>
     <a href="/CustomerMasters/Index">CUSTOMER MASTER</a>
-    @*<a href="/CompanyMasters/Index">COMPANY MASTER</a>
-        <a href="/BankMasters/Index">BANK MASTER</a>*@
+    <a href="/CompanyMasters/Index">COMPANY MASTER</a>
+    <a href="/BankMasters/Index">BANK MASTER</a>
 
 
 </div>
@@ -40,9 +40,9 @@
     <i class="fa fa-caret-down"></i>
 </button>
 <div class="dropdown-container">
-        <a href="/CashPayment/Index">PAYMENT</a>
-        <a href="/CashReceived/Index">RECEIVED</a>
-        @*<a href="#">SALES</a>
+    <a href="/CashPayment/Index">PAYMENT</a>
+    <a href="/CashReceived/Index">RECEIVED</a>
+    @*<a href="#">SALES</a>
         <a href="#">SALES RETURN</a>
         <a href="#">QUOTATION</a>
         <a href="#">PAYMENT</a>
@@ -90,34 +90,28 @@
         <a href="#">QUOTATION REPORT</a>*@
 </div>
 
-<button class="dropdown-btn">
-    ABOUT
-    <i class="fa fa-caret-down"></i>
-</button>
-<div class="dropdown-container">
-
-</div>
+<a href="/Home/About" style="color:greenyellow">ABOUT</a>
 
 <a href="/Home/Login" style="color:red">LOG OUT</a>
 
-
+ 
 
 
 <script>
 
-var dropdown = document.getElementsByClassName("dropdown-btn");
-var i;
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
 
-for (i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function() {
-  this.classList.toggle("active");
-  var dropdownContent = this.nextElementSibling;
-  if (dropdownContent.style.display === "block") {
-  dropdownContent.style.display = "none";
-  } else {
-  dropdownContent.style.display = "block";
-  }
-  });
-}
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
 </script>
 

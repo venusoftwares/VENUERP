@@ -73,5 +73,9 @@ namespace VENUERP.Controllers
         {
             return View();
         }
+        public ActionResult About()
+        {
+            return View();
+        }
     }
 }

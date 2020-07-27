@@ -19,7 +19,7 @@ namespace VENUERP.ViewModels
         public decimal? SizeW { get; set; } 
         public decimal? SizeH { get; set; } 
         public decimal? TotSize { get; set; }
-        public int Qty { get; set; }
+        public int? Qty { get; set; }
         public decimal? Rate { get; set; }
         public decimal? Amount { get; set; }
 
