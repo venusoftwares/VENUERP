@@ -11,6 +11,10 @@ using VENUERP.Models;
 using VENUERP.Repository.Interface.TRANSACTION;
 using VENUERP.Repositoy.TRANSACTION;
 using VENUERP.Providers;
+using VENUERP.ViewModels.JQUERYDATATABLES;
+using VENUERP.Repository.Interface.PAYMENT;
+using VENUERP.Repository.Repository.PAYMENT;
+using VENUERP.ViewModels.PAYMENT;
 
 namespace VENUERP.Controllers
 {
@@ -19,9 +23,12 @@ namespace VENUERP.Controllers
     {
         private DatabaseContext db = new DatabaseContext();
         private readonly ISQLStored _sQLStored;
+        private readonly ICashPayment _cashPayment;
+
         public CashPaymentController()
         {
             this._sQLStored = new SQLStoredProcedure();
+            this._cashPayment = new CashPaymentRepository();
         }
         // GET: CashPayment
         public async Task<ActionResult> Index()
@@ -169,6 +176,46 @@ namespace VENUERP.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        public ActionResult GetData(JqueryDatatableParam param)
+        {
+            var cashPaymentViewModels  = _cashPayment.GetCashPaymentDetails(); //This method is returning the IEnumerable employee from database 
+            if (!string.IsNullOrEmpty(param.sSearch))
+            {
+                cashPaymentViewModels = cashPaymentViewModels.Where(x => x.Date.ToLower().Contains(param.sSearch.ToLower())
+                                              || x.Name.ToLower().Contains(param.sSearch.ToLower())
+                                              || x.No.ToLower().Contains(param.sSearch.ToLower())
+                                              || x.Amount.ToLower().Contains(param.sSearch.ToLower())
+                                              ).ToList();
+            }
+            var sortColumnIndex = Convert.ToInt32(HttpContext.Request.QueryString["iSortCol_0"]);
+            var sortDirection = HttpContext.Request.QueryString["sSortDir_0"];
+            if (sortColumnIndex == 3)
+            {
+                cashPaymentViewModels = sortDirection == "asc" ? cashPaymentViewModels.OrderBy(c => c.No) : cashPaymentViewModels.OrderByDescending(c => c.No);
+            }
+            else if (sortColumnIndex == 4)
+            {
+                cashPaymentViewModels = sortDirection == "asc" ? cashPaymentViewModels.OrderBy(c => c.Date) : cashPaymentViewModels.OrderByDescending(c => c.Date);
+            }
+            else if (sortColumnIndex == 5)
+            {
+                cashPaymentViewModels = sortDirection == "asc" ? cashPaymentViewModels.OrderBy(c => c.Name) : cashPaymentViewModels.OrderByDescending(c => c.Name);
+            }
+            else if (sortColumnIndex == 6)
+            {
+                cashPaymentViewModels = sortDirection == "asc" ? cashPaymentViewModels.OrderBy(c => c.Amount) : cashPaymentViewModels.OrderByDescending(c => c.Amount);
+            }
+            else
+            {
+                Func<CashPaymentViewModel, string> orderingFunction = e => sortColumnIndex == 0 ? e.No : sortColumnIndex == 1 ? e.Date : e.Name;
+                cashPaymentViewModels = sortDirection == "asc" ? cashPaymentViewModels.OrderBy(orderingFunction) : cashPaymentViewModels.OrderByDescending(orderingFunction);
+            }
+            var displayResult = cashPaymentViewModels.Skip(param.iDisplayStart)
+               .Take(param.iDisplayLength).ToList();
+            var totalRecords = cashPaymentViewModels.Count();
+            return Json(new { param.sEcho, iTotalRecords = totalRecords, iTotalDisplayRecords = totalRecords, aaData = displayResult }, JsonRequestBehavior.AllowGet);
         }
     }
 }

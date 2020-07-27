@@ -1,81 +1,25 @@
-﻿@model IEnumerable<VENUERP.Models.CashMaster>
+﻿<input type="hidden" id="CashPaymentController" value="CashPaymentController" />
 
-@{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+<a href="Create"><Button class="btn-success"><span class="glyphicon glyphicon-plus">ADD</span></Button> </a>
+<h4>CashPayment/Index</h4>
 
-<h2>Index</h2>
+<div class="row">
+    <div class="col-sm-12">
+        <table class="table table-bordered table-striped" id="tblStudent">
+            <thead>
+                <tr style="background-color:maroon;color:white">
+                    <th scope="col">No</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Amount</th>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table id="example" class="table table-striped table-bordered" style="width:100%">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.VoucherNo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Date)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SupplierMaster.SupplierName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SupplierMaster.ContactNo)
-            </th>
+                    <th scope="col">Edit </th>
+                    <th scope="col">View </th>
+                    <th scope="col">Delete </th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
 
-            <th>
-                @Html.DisplayNameFor(model => model.Nature)
-            </th>
-
-            <th>
-                @Html.DisplayNameFor(model => model.Amount)
-            </th>
-            
-            <th>EDIT</th>
-            <th>DETAIL</th>
-            <th>DELETE</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.VoucherNo)
-            </td>
-            <td>
-                @Convert.ToDateTime(item.Date).ToString("dd-MM-yyyy")
-                @*@Html.DisplayFor(modelItem => item.PurchaseDate)*@
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SupplierMaster.SupplierName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SupplierMaster.ContactNo)
-            </td>
-
-
-
-            <td>
-                @Html.DisplayFor(modelItem => item.Nature)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Amount)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.CashId })
-            </td>
-            <td>
-                @Html.ActionLink("Details", "Details", new { id = item.CashId })
-            </td>
-            <td>
-                @Html.ActionLink("Delete", "Delete", new { id = item.CashId })
-            </td>
-        </tr>
-        }
-    </tbody>
-</table>
 

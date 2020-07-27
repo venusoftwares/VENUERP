@@ -48,6 +48,8 @@
     <Compile Include="MASTER\ItemMasterViewModel.cs" />
     <Compile Include="MASTER\SupplierMasterViewModel.cs" />
     <Compile Include="JQUERYDATATABLES\JqueryDatatableParam.cs" />
+    <Compile Include="PAYMENT\CashPaymentViewModel.cs" />
+    <Compile Include="PAYMENT\CashReceivedViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TRANSACTION\IQuotationViewModel.cs" />
     <Compile Include="TRANSACTION\ISalesMasterViewModel.cs" />

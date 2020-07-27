@@ -12,6 +12,10 @@ using VENUERP.Models;
 using VENUERP.Repository.Interface.TRANSACTION;
 using VENUERP.Repositoy.TRANSACTION;
 using VENUERP.Providers;
+using VENUERP.ViewModels.JQUERYDATATABLES;
+using VENUERP.Repository.Interface.PAYMENT;
+using VENUERP.Repository.Repository.PAYMENT;
+using VENUERP.ViewModels.PAYMENT;
 
 namespace VENUERP.Controllers
 {
@@ -20,9 +24,11 @@ namespace VENUERP.Controllers
     {
         private DatabaseContext db = new DatabaseContext();
         private readonly ISQLStored _sQLStored;
+        private readonly ICashReceived _cashReceived;
         public CashReceivedController()
         {
             this._sQLStored = new SQLStoredProcedure();
+            this._cashReceived = new CashReceivedRepository();
         }
 
         // GET: CashReceived
@@ -168,6 +174,45 @@ namespace VENUERP.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+        public ActionResult GetData(JqueryDatatableParam param)
+        {
+            var cashReceivedViewModels  = _cashReceived.GetCashReceivedDetails(); //This method is returning the IEnumerable employee from database 
+            if (!string.IsNullOrEmpty(param.sSearch))
+            {
+                cashReceivedViewModels = cashReceivedViewModels.Where(x => x.Date.ToLower().Contains(param.sSearch.ToLower())
+                                              || x.Name.ToLower().Contains(param.sSearch.ToLower())
+                                              || x.No.ToLower().Contains(param.sSearch.ToLower())
+                                              || x.Amount.ToLower().Contains(param.sSearch.ToLower())
+                                              ).ToList();
+            }
+            var sortColumnIndex = Convert.ToInt32(HttpContext.Request.QueryString["iSortCol_0"]);
+            var sortDirection = HttpContext.Request.QueryString["sSortDir_0"];
+            if (sortColumnIndex == 3)
+            {
+                cashReceivedViewModels = sortDirection == "asc" ? cashReceivedViewModels.OrderBy(c => c.No) : cashReceivedViewModels.OrderByDescending(c => c.No);
+            }
+            else if (sortColumnIndex == 4)
+            {
+                cashReceivedViewModels = sortDirection == "asc" ? cashReceivedViewModels.OrderBy(c => c.Date) : cashReceivedViewModels.OrderByDescending(c => c.Date);
+            }
+            else if (sortColumnIndex == 5)
+            {
+                cashReceivedViewModels = sortDirection == "asc" ? cashReceivedViewModels.OrderBy(c => c.Name) : cashReceivedViewModels.OrderByDescending(c => c.Name);
+            }
+            else if (sortColumnIndex == 6)
+            {
+                cashReceivedViewModels = sortDirection == "asc" ? cashReceivedViewModels.OrderBy(c => c.Amount) : cashReceivedViewModels.OrderByDescending(c => c.Amount);
+            }
+            else
+            {
+                Func<CashReceivedViewModel, string> orderingFunction = e => sortColumnIndex == 0 ? e.No : sortColumnIndex == 1 ? e.Date : e.Name;
+                cashReceivedViewModels = sortDirection == "asc" ? cashReceivedViewModels.OrderBy(orderingFunction) : cashReceivedViewModels.OrderByDescending(orderingFunction);
+            }
+            var displayResult = cashReceivedViewModels.Skip(param.iDisplayStart)
+               .Take(param.iDisplayLength).ToList();
+            var totalRecords = cashReceivedViewModels.Count();
+            return Json(new { param.sEcho, iTotalRecords = totalRecords, iTotalDisplayRecords = totalRecords, aaData = displayResult }, JsonRequestBehavior.AllowGet);
         }
     }
 }
