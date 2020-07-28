@@ -18,7 +18,7 @@ namespace VENUERP.Models
         public DateTime IQuotationDate { get; set; }
 
 
-        public string IQuotationNo { get; set; }
+        public int IQuotationNo { get; set; }
 
         public int CustomerID { get; set; }
 

@@ -1,0 +1,11 @@
+C:\venuerp\VENUERP.ViewModels\bin\Release\VENUERP.ViewModels.dll
+C:\venuerp\VENUERP.ViewModels\bin\Release\VENUERP.ViewModels.pdb
+C:\venuerp\VENUERP.ViewModels\bin\Release\VENUERP.Models.dll
+C:\venuerp\VENUERP.ViewModels\bin\Release\EntityFramework.dll
+C:\venuerp\VENUERP.ViewModels\bin\Release\VENUERP.Models.pdb
+C:\venuerp\VENUERP.ViewModels\bin\Release\EntityFramework.xml
+C:\venuerp\VENUERP.ViewModels\obj\Release\VENUERP.ViewModels.csprojAssemblyReference.cache
+C:\venuerp\VENUERP.ViewModels\obj\Release\VENUERP.ViewModels.csproj.CoreCompileInputs.cache
+C:\venuerp\VENUERP.ViewModels\obj\Release\VENUERP.ViewModels.csproj.CopyComplete
+C:\venuerp\VENUERP.ViewModels\obj\Release\VENUERP.ViewModels.dll
+C:\venuerp\VENUERP.ViewModels\obj\Release\VENUERP.ViewModels.pdb

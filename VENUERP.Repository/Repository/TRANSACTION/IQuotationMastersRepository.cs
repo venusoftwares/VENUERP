@@ -29,12 +29,32 @@ namespace VENUERP.Repository.Repository.TRANSACTION
                 {
                     Id = x.IQuotationID,
                     Date = Convert.ToDateTime(x.IQuotationDate).ToString("dd-MM-yyyy"),
-                    No = x.IQuotationNo,
+                    No = Convert.ToString( x.IQuotationNo),
                     Name = x.CustomerMaster.Name,
                     Amount = Convert.ToString(x.GrandTotal)
                 };
                 list.Add(b);
             }            
+            return list;
+        }
+
+        public IEnumerable<QuoataionViewModel> GetQuotationMasterDetails()
+        {
+            var list = new List<QuoataionViewModel>();
+            var QuotationMasters = db.QuotationMasters.Include(p => p.CustomerMaster);
+            var result = QuotationMasters.OrderByDescending(x => x.QuotationID).ToList();
+            foreach (var x in result)
+            {
+                var b = new QuoataionViewModel()
+                {
+                    Id = x.QuotationID,
+                    Date = Convert.ToDateTime(x.QuotationDate).ToString("dd-MM-yyyy"),
+                    No = Convert.ToString(x.QuotationNo),
+                    Name = x.CustomerMaster.Name,
+                    Amount = Convert.ToString(x.GrandTotal)
+                };
+                list.Add(b);
+            }
             return list;
         }
     }

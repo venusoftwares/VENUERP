@@ -30,5 +30,10 @@ namespace VENUERP.Models
         public decimal? Amount { get; set; }
 
         public int? ComCode { get; set; }
+        public BrandMaster brandMaster { get; set; }
+
+        public CategoryMaster CategoryMaster { get; set; }
+
+        public ItemMaster ItemMaster { get; set; }
     }
 }

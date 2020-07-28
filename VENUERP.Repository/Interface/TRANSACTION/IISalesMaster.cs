@@ -10,5 +10,7 @@ namespace VENUERP.Repository.Interface.TRANSACTION
     public interface IISalesMaster
     {
         IEnumerable<SalesViewModel> GetISalesMasterDetails();
+        IEnumerable<SalesViewModel> GetSalesMasterDetails();
+
     }
 }

@@ -1,0 +1,272 @@
+﻿@model VENUERP.ViewModels.SalesMasterViewModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="text-center" style="color:white;background-color:brown">
+                SALES MASTER
+            </div>
+
+            <input type="hidden" id="TotSize" value="" />
+            <table class="table" style="border:2px solid #3b0c31">
+                <tr>
+                    <th>
+                        @Html.Label("Date:", htmlAttributes: new { @class = "control-label col-md-3" })
+                        @Html.EditorFor(model => model.SalesMaster.SalesDate, new { htmlAttributes = new { @class = "", type = "date" } })
+
+                    </th>
+                    <th>
+                        @Html.Label("InvoiceNo:", htmlAttributes: new { @class = "control-label col-md-4" })
+                        @Html.TextBoxFor(model => model.SalesMaster.InvoiceNo, new { htmlAttributes = new { @class = "" } })
+                        @Html.ValidationMessageFor(model => model.SalesMaster.InvoiceNo, "", new { @class = "text-danger" })
+                    </th>
+                    <th>
+                        @Html.Label("Cash:", htmlAttributes: new { @class = "control-label col-md-3" })
+                        @Html.DropDownListFor(model => model.SalesMaster.IsCash, new List<SelectListItem>{
+        new SelectListItem{ Text="YES", Value="YES"},
+        new SelectListItem{ Text="NO", Value="NO"}
+        })
+                        @Html.ValidationMessageFor(model => model.SalesMaster.IsCash, "", new { @class = "text-danger" })
+                    </th>
+                    <th>
+                        @Html.Label("Customer:", htmlAttributes: new { @class = "control-label col-md-3" })
+                        @Html.DropDownList("CustomerId", null, htmlAttributes: new { @class = "" })
+                        @Html.ValidationMessageFor(model => model.SalesMaster.CustomerID, "", new { @class = "text-danger" })
+                    </th>
+                </tr>
+
+
+
+
+            </table>
+
+            <table class="table" style="border:2px solid #3b0c31">
+                <tr>
+                    <th>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.BrandID, "BrandID", htmlAttributes: new { @class = "control-label col-md-5" })
+                            <div class="col-md-10">
+                                @Html.DropDownList("BrandID", null, htmlAttributes: new { @class = "" })
+                                @Html.ValidationMessageFor(model => model.BrandID, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.CategoryID, "CategoryID", htmlAttributes: new { @class = "control-label col-md-5" })
+                            <div class="col-md-10">
+                                @Html.DropDownList("CategoryID", null, htmlAttributes: new { @class = "" })
+                                @Html.ValidationMessageFor(model => model.CategoryID, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.ItemID, "ItemID", htmlAttributes: new { @class = "control-label col-md-5" })
+                            <div class="col-md-10">
+                                @Html.DropDownList("ItemID", null, htmlAttributes: new { @class = "" })
+                                @Html.ValidationMessageFor(model => model.ItemID, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                    </th>
+                    <th>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Qty, htmlAttributes: new { @class = "control-label col-md-5" })
+                            <div class="col-md-10">
+                                @Html.TextBoxFor(model => model.Qty, new { htmlAttributes = new { @class = "PQty" } })
+                                @Html.ValidationMessageFor(model => model.Qty, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Rate, htmlAttributes: new { @class = "control-label col-md-5" })
+                            <div class="col-md-10">
+                                @Html.TextBoxFor(model => model.Rate, new { htmlAttributes = new { @class = "" } })
+                                @Html.ValidationMessageFor(model => model.Rate, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Amount, htmlAttributes: new { @class = "control-label col-md-5" })
+                            <div class="col-md-10">
+                                @Html.TextBoxFor(model => model.Amount, new { htmlAttributes = new { @class = "", @readonly = "readonly", @contenteditable = "false" } })
+                                @Html.ValidationMessageFor(model => model.Amount, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <br />
+                                <input type="submit" value="ADD" name="Select" class="btn-success" />
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+            </table>
+
+
+            @Html.Action("SalesItem")
+
+            <table class="table" style="border:2px solid #3b0c31;height:150px;">
+                <tr>
+                    <th>
+                        @Html.LabelFor(model => model.SalesMaster.CGSTAmt, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.SalesMaster.CGSTAmt, new { htmlAttributes = new { @class = "" } })
+                            @Html.ValidationMessageFor(model => model.SalesMaster.CGSTAmt, "", new { @class = "text-danger" })
+                        </div>
+                    </th>
+                    <th>
+                        @Html.LabelFor(model => model.SalesMaster.SGSTAmt, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.SalesMaster.SGSTAmt, new { htmlAttributes = new { @class = "" } })
+                            @Html.ValidationMessageFor(model => model.SalesMaster.SGSTAmt, "", new { @class = "text-danger" })
+                        </div>
+                    </th>
+                    <th>
+                        @Html.LabelFor(model => model.SalesMaster.IGSTAmt, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.SalesMaster.IGSTAmt, new { htmlAttributes = new { @class = "" } })
+                            @Html.ValidationMessageFor(model => model.SalesMaster.IGSTAmt, "", new { @class = "text-danger" })
+                        </div>
+
+
+                    </th>
+                    <th>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.SalesMaster.TaxableAmt, htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @Html.TextBoxFor(model => model.SalesMaster.TaxableAmt, new { htmlAttributes = new { @class = "" } })
+                                @Html.ValidationMessageFor(model => model.SalesMaster.TaxableAmt, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        @Html.LabelFor(model => model.SalesMaster.CGSTRate, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.SalesMaster.CGSTRate, new { htmlAttributes = new { @class = "" } })
+                            @Html.ValidationMessageFor(model => model.SalesMaster.CGSTRate, "", new { @class = "text-danger" })
+                        </div>
+                    </th>
+                    <th>
+                        @Html.LabelFor(model => model.SalesMaster.SGSTRate, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.SalesMaster.SGSTRate, new { htmlAttributes = new { @class = "" } })
+                            @Html.ValidationMessageFor(model => model.SalesMaster.SGSTRate, "", new { @class = "text-danger" })
+                        </div>
+                    </th>
+                    <th>
+                        @Html.LabelFor(model => model.SalesMaster.IGSTRate, htmlAttributes: new { @class = "control-label col-md-3" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(model => model.SalesMaster.IGSTRate, new { htmlAttributes = new { @class = "" } })
+                            @Html.ValidationMessageFor(model => model.SalesMaster.IGSTRate, "", new { @class = "text-danger" })
+                        </div>
+                    </th>
+                    <th>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.SalesMaster.TotalGST, htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @Html.TextBoxFor(model => model.SalesMaster.TotalGST, new { htmlAttributes = new { @class = "", value = 0 } })
+                                @Html.ValidationMessageFor(model => model.SalesMaster.TotalGST, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>
+
+                    </th>
+                    <th>
+
+                    </th>
+                    <th>
+
+                    </th>
+                    <th>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.SalesMaster.GrandTotal, htmlAttributes: new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @Html.TextBoxFor(model => model.SalesMaster.GrandTotal, new { htmlAttributes = new { @class = "" } })
+                                @Html.ValidationMessageFor(model => model.SalesMaster.GrandTotal, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                    </th>
+                </tr>
+            </table>
+
+            <table class="table" style="border:2px solid #3b0c31">
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Save" name="Select" class="btn-success" />
+                        <input type="reset" value="Reset" name="Select" class="btn-warning" />
+                        <input type="submit" value="Delete" name="Select" class="btn-danger" />
+
+                    </td>
+                    <td></td>
+
+                </tr>
+            </table>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+}
+
+
+<style>
+    .form-control {
+        font-size: 12px;
+        max-width: 150px;
+    }
+
+    .control-label {
+        font-size: 12px;
+    }
+
+    table, th, td {
+        border: 0px solid #3b0c31;
+        font-size: 12px;
+    }
+</style>

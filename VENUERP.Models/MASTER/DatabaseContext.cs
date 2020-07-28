@@ -70,9 +70,7 @@ namespace VENUERP.Models
                 .Property(e => e.TotSize)
                 .HasPrecision(9, 2);
 
-            modelBuilder.Entity<IQuotationMaster>()
-                .Property(e => e.IQuotationNo)
-                .IsUnicode(false);
+          
 
             modelBuilder.Entity<IQuotationMaster>()
                 .Property(e => e.CGSTAmt)

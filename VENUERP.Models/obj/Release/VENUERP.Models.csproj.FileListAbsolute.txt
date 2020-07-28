@@ -1,0 +1,10 @@
+C:\venuerp\VENUERP.Models\bin\Release\VENUERP.Models.dll
+C:\venuerp\VENUERP.Models\bin\Release\VENUERP.Models.pdb
+C:\venuerp\VENUERP.Models\bin\Release\EntityFramework.dll
+C:\venuerp\VENUERP.Models\bin\Release\EntityFramework.SqlServer.dll
+C:\venuerp\VENUERP.Models\bin\Release\EntityFramework.xml
+C:\venuerp\VENUERP.Models\bin\Release\EntityFramework.SqlServer.xml
+C:\venuerp\VENUERP.Models\obj\Release\VENUERP.Models.csproj.CoreCompileInputs.cache
+C:\venuerp\VENUERP.Models\obj\Release\VENUERP.Models.csproj.CopyComplete
+C:\venuerp\VENUERP.Models\obj\Release\VENUERP.Models.dll
+C:\venuerp\VENUERP.Models\obj\Release\VENUERP.Models.pdb

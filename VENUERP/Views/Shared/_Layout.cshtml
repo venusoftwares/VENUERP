@@ -35,12 +35,11 @@
                     <span class="icon-bar"></span>
                 </button>
                 <span style="font-size:30px;cursor:pointer" class="navbar-brand" onclick="openNav()">&#9776; </span>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <p class="navbar-brand"> @Session["CompanyName"]</p>
+
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
-
                 </ul>
             </div>
         </div>
@@ -76,6 +75,8 @@
     <script src="~/Scripts/Controller/TRANSACTION/IQuotationMastersController.js"></script>
     <script src="~/Scripts/Controller/TRANSACTION/ISalesMastersController.js"></script>
     <script src="~/Scripts/Controller/TRANSACTION/PurchaseMastersController.js"></script>
+    <script src="~/Scripts/Controller/TRANSACTION/QuotationMastersController.js"></script>
+    <script src="~/Scripts/Controller/TRANSACTION/SalesMastersController.js"></script>
 
     <script src="~/Scripts/Controller/PAYMENT/CashPaymentController.js"></script>
     <script src="~/Scripts/Controller/PAYMENT/CashReceivedController.js"></script>

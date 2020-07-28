@@ -66,7 +66,7 @@ namespace VENUERP.Controllers.TRAMSACTION
             ViewBag.ItemID = new SelectList(db.ItemMasters, "ItemId", "Description");
             ViewBag.CustomerId = new SelectList(db.CustomerMasters, "CustomerId", "Name");
      
-            Session["IQuotationId"] = Convert.ToString(db.IQuotationMaster.Select(x=>x.IQuotationID).DefaultIfEmpty(0).Max() + 1);
+            Session["IQuoNo"] = Convert.ToString(db.IQuotationMaster.Select(x=>x.IQuotationNo).DefaultIfEmpty(0).Max() + 1);
     
             return View();
         }

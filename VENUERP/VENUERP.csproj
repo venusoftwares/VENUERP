@@ -304,6 +304,8 @@
     <Compile Include="Controllers\TRANSACTION\IQuotationMastersController.cs" />
     <Compile Include="Controllers\TRANSACTION\ISalesMastersController.cs" />
     <Compile Include="Controllers\TRANSACTION\PurchaseMastersController.cs" />
+    <Compile Include="Controllers\TRANSACTION\QuotationMastersController.cs" />
+    <Compile Include="Controllers\TRANSACTION\SalesMastersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -931,6 +933,7 @@
     <Content Include="Reports\Purchase.rpt" />
     <Content Include="Reports\Quotation.rpt" />
     <Content Include="Reports\Sales.rpt" />
+    <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\Controller\MASTER\BrandMastersController.js" />
     <Content Include="Scripts\Controller\MASTER\CategoryMastersController.js" />
@@ -940,7 +943,9 @@
     <Content Include="Scripts\Controller\MASTER\SupplierMastersController.js" />
     <Content Include="Scripts\Controller\PAYMENT\CashPaymentController.js" />
     <Content Include="Scripts\Controller\PAYMENT\CashReceivedController.js" />
+    <Content Include="Scripts\Controller\TRANSACTION\QuotationMastersController.js" />
     <Content Include="Scripts\Controller\TRANSACTION\IQuotationMastersController.js" />
+    <Content Include="Scripts\Controller\TRANSACTION\SalesMastersController.js" />
     <Content Include="Scripts\Controller\TRANSACTION\ISalesMastersController.js" />
     <Content Include="Scripts\Controller\TRANSACTION\PurchaseMastersController.js" />
     <Content Include="Scripts\DATATABLES\dataTables.bootstrap.min.js" />
@@ -1033,6 +1038,19 @@
     <Content Include="Views\BankMasters\Create.cshtml" />
     <Content Include="Views\BankMasters\Edit.cshtml" />
     <Content Include="Views\BankMasters\Delete.cshtml" />
+    <Content Include="Views\QuotationMasters\Create.cshtml" />
+    <Content Include="Views\QuotationMasters\Delete.cshtml" />
+    <Content Include="Views\QuotationMasters\Details.cshtml" />
+    <Content Include="Views\QuotationMasters\Edit.cshtml" />
+    <Content Include="Views\QuotationMasters\Index.cshtml" />
+    <Content Include="Views\QuotationMasters\SendMail.cshtml" />
+    <Content Include="Views\QuotationMasters\_QuotationItem.cshtml" />
+    <Content Include="Views\SalesMasters\Create.cshtml" />
+    <Content Include="Views\SalesMasters\Delete.cshtml" />
+    <Content Include="Views\SalesMasters\Details.cshtml" />
+    <Content Include="Views\SalesMasters\Edit.cshtml" />
+    <Content Include="Views\SalesMasters\Index.cshtml" />
+    <Content Include="Views\SalesMasters\_SalesItem.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

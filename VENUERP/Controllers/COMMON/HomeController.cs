@@ -58,6 +58,7 @@ namespace VENUERP.Controllers
                 {
                     if (aa.Username != null && aa.Password != null && aa.ComCode != null)
                     {
+                        Session["CompanyName"] = db.CompanyMasters.Where(x => x.ComCode == aa.ComCode).Select(x=>x.CompanyName).FirstOrDefault();
                         Session["ComCode"] = aa.ComCode;
                         Session["Username"] = aa.Username;
                         Session["Password"] = aa.Password;

@@ -37,5 +37,24 @@ namespace VENUERP.Repository.Repository.TRANSACTION
             }
             return list;
         }
+        public IEnumerable<SalesViewModel> GetSalesMasterDetails()
+        {
+            var list = new List<SalesViewModel>();
+            var QuotationMasters = db.SalesMasters.Include(p => p.CustomerMaster);
+            var result = QuotationMasters.OrderByDescending(x => x.SalesID).ToList();
+            foreach (var x in result)
+            {
+                var b = new SalesViewModel()
+                {
+                    Id = x.SalesID,
+                    Date = Convert.ToDateTime(x.SalesDate).ToString("dd-MM-yyyy"),
+                    No = x.InvoiceNo,
+                    Name = x.CustomerMaster.Name,
+                    Amount = Convert.ToString(x.GrandTotal)
+                };
+                list.Add(b);
+            }
+            return list;
+        }        
     }
 }

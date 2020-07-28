@@ -42,5 +42,6 @@ namespace VENUERP.Models
         public decimal? GrandTotal { get; set; }
 
         public int? ComCode { get; set; }
+        public CustomerMaster CustomerMaster { get; set; }
     }
 }
