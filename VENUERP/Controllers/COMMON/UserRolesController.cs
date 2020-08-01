@@ -49,7 +49,7 @@ namespace VENUERP.Controllers.COMMON
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "Id,Role,Status")] UserRoles userRoles)
+        public async Task<ActionResult> Create([Bind(Include = "Id,Role,Status,Dashboard")] UserRoles userRoles)
         {
             if (ModelState.IsValid)
             {
@@ -81,7 +81,7 @@ namespace VENUERP.Controllers.COMMON
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "Id,Role,Status")] UserRoles userRoles)
+        public async Task<ActionResult> Edit([Bind(Include = "Id,Role,Status,Dashboard")] UserRoles userRoles)
         {
             if (ModelState.IsValid)
             {

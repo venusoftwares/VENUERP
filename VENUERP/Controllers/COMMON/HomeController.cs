@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Data.Entity;
 using System.Web.Mvc;
 using VENUERP.Models;
 using VENUERP.Providers;
@@ -12,10 +13,18 @@ namespace VENUERP.Controllers
     
     public class HomeController : Controller
     {
-        public DatabaseContext db = new DatabaseContext();
+        public DatabaseContext db;
+        public HomeController()
+        {
+            this.db = new DatabaseContext();
+        }
+
         [Authentication]
         public ActionResult Index()
         {
+            int RoleId = Convert.ToInt32(Session["RoleId"]);
+            var DashboardName = db.UserRoles.Find(RoleId).Dashboard;
+
             DashboardViewModel dashboardViewModel = new DashboardViewModel();
             dashboardViewModel.TotalBrands = db.BrandMasters.Count();
             dashboardViewModel.TotalCategories = db.CategoryMasters.Count();
@@ -33,15 +42,54 @@ namespace VENUERP.Controllers
             dashboardViewModel.TodayTotalSalesAmount = db.ISalesMaster.Sum(x => x.GrandTotal);
             dashboardViewModel.TodayTotalPurchases = db.PurchaseMasters.Sum(x => x.GrandTotal);
 
-
             ViewBag.Title = "Home Page";
-         
 
+            if(DashboardName == "SuperAdminDashboard")
+            {
+                return View("SuperAdminDashboard", dashboardViewModel);
+            }
+            if (DashboardName == "ManagerDashboard")
+            {
+                return View("ManagerDashboard", dashboardViewModel);
+            }
+            if (DashboardName == "HrDashboard")
+            {
+                return View("HrDashboard", dashboardViewModel);
+            }
+            if (DashboardName == "StaffDashboard")
+            {
+                return View("StaffDashboard", dashboardViewModel);
+            }
+            else
+            {
+                return View("StaffDashboard", dashboardViewModel);
+            }
+        }
+
+        public ActionResult SuperAdminDashboard(DashboardViewModel dashboardViewModel)
+        {
+            return View(dashboardViewModel);
+        }
+        public ActionResult ManagerDashboard(DashboardViewModel dashboardViewModel)
+        {
+            return View(dashboardViewModel);
+        }
+        public ActionResult HrDashboard(DashboardViewModel dashboardViewModel)
+        {
+            return View(dashboardViewModel);
+        }
+        public ActionResult StaffDashboard(DashboardViewModel dashboardViewModel)
+        {
             return View(dashboardViewModel);
         }
         public ActionResult ShowMenus()
         {
-            return PartialView("_showmenu");
+            int RoleId = Convert.ToInt32(Session["RoleId"]);
+            var showmenu = db.PermissionsRole.Include(x => x.MapPages).Where(x => x.RoleId == RoleId).Select(x => new ShowMenuItems()
+            {
+                Pages = x.MapPages.Pages
+            }).Distinct();
+            return PartialView("_showmenu", showmenu);
         }
 
   

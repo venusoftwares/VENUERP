@@ -29,4 +29,8 @@ namespace VENUERP.ViewModels.ERP
 
 
     }
+    public class ShowMenuItems
+    {
+        public string Pages { get; set; }
+    }
 }
