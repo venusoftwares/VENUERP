@@ -9,6 +9,7 @@ using System.Web;
 using System.Web.Mvc;
 using VENUERP.Models;
 using VENUERP.Providers;
+using System.IO;
 
 namespace VENUERP.Controllers.MASTER
 {
@@ -50,17 +51,26 @@ namespace VENUERP.Controllers.MASTER
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "ComCode,CompanyName,Address,Address2,PhoneNo,MobileNo,GSTNo,PinCode,City,WebSite,Email,Password")] CompanyMaster companyMaster)
+        public async Task<ActionResult> Create([Bind(Include = "ComCode,CompanyName,Address,Address2,PhoneNo,MobileNo,GSTNo,PinCode,City,WebSite,Email,Password,Logo")] CompanyMaster companyMaster, HttpPostedFileBase ImageData)
         {
             if (ModelState.IsValid)
             {
                 companyMaster.ComCode = Convert.ToInt32(Session["ComCode"]);
+                companyMaster.Logo = ImageData != null ? ConvertToBytes(ImageData) : null;
                 db.CompanyMasters.Add(companyMaster);
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
 
             return View(companyMaster);
+        }
+
+        public byte[] ConvertToBytes(HttpPostedFileBase image)
+        {
+            byte[] imageBytes = null;
+            BinaryReader reader = new BinaryReader(image.InputStream);
+            imageBytes = reader.ReadBytes((int)image.ContentLength);
+            return imageBytes;
         }
 
         // GET: CompanyMasters/Edit/5
@@ -77,17 +87,35 @@ namespace VENUERP.Controllers.MASTER
             }
             return View(companyMaster);
         }
-
+        public ActionResult RetrieveImage(int id)
+        {
+            byte[] cover = GetImageFromDataBase(id);
+            if (cover != null)
+            {
+                return File(cover, "image/jpg");
+            }
+            else
+            {
+                return null;
+            }
+        }
+        public byte[] GetImageFromDataBase(int Id)
+        {
+            var q = from temp in db.CompanyMasters where temp.ComCode == Id select temp.Logo;
+            byte[] cover = q.First();
+            return cover;
+        }
         // POST: CompanyMasters/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "ComCode,CompanyName,Address,Address2,PhoneNo,MobileNo,GSTNo,PinCode,City,WebSite,Email,Password")] CompanyMaster companyMaster)
+        public async Task<ActionResult> Edit([Bind(Include = "ComCode,CompanyName,Address,Address2,PhoneNo,MobileNo,GSTNo,PinCode,City,WebSite,Email,Password,Logo")] CompanyMaster companyMaster, HttpPostedFileBase ImageData)
         {
             if (ModelState.IsValid)
             {
                 companyMaster.ComCode = Convert.ToInt32(Session["ComCode"]);
+                companyMaster.Logo = ImageData != null ? ConvertToBytes(ImageData) : null;
                 db.Entry(companyMaster).State = EntityState.Modified;
                 await db.SaveChangesAsync();
                 return RedirectToAction("Index");

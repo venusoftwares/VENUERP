@@ -106,6 +106,9 @@
       <HintPath>..\packages\CrystalReports.Web.13.0.3501\lib\net20\CrystalDecisions.Web.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.1, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.1\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
     </Reference>
@@ -113,6 +116,9 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Rotativa, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rotativa.1.7.3\lib\net461\Rotativa.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -184,6 +190,7 @@
       <Private>True</Private>
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="EntityFramework">
@@ -290,7 +297,11 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\COMMON\CascadingController.cs" />
+    <Compile Include="Controllers\COMMON\LoginsController.cs" />
+    <Compile Include="Controllers\COMMON\MapPagesController.cs" />
+    <Compile Include="Controllers\COMMON\UserRolesController.cs" />
     <Compile Include="Controllers\CRYSTALREPORT\CrystalReportPdfResult.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\MASTER\BankMastersController.cs" />
     <Compile Include="Controllers\MASTER\CompanyMastersController.cs" />
     <Compile Include="Controllers\MASTER\CustomerMastersController.cs" />
@@ -301,6 +312,7 @@
     <Compile Include="Controllers\COMMON\HomeController.cs" />
     <Compile Include="Controllers\PAYMENTS\CashPaymentController.cs" />
     <Compile Include="Controllers\PAYMENTS\CashReceivedController.cs" />
+    <Compile Include="Controllers\COMMON\PermissionsRolesController.cs" />
     <Compile Include="Controllers\TRANSACTION\IQuotationMastersController.cs" />
     <Compile Include="Controllers\TRANSACTION\ISalesMastersController.cs" />
     <Compile Include="Controllers\TRANSACTION\PurchaseMastersController.cs" />
@@ -900,6 +912,10 @@
     <Content Include="Global.asax" />
     <Content Include="pp.jpg" />
     <Content Include="Reports\Reports.aspx" />
+    <Content Include="Rotativa\help-wkhtmltoimage.txt" />
+    <Content Include="Rotativa\help-wkhtmltopdf.txt" />
+    <Content Include="Rotativa\wkhtmltoimage.exe" />
+    <Content Include="Rotativa\wkhtmltopdf.exe" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
@@ -933,6 +949,7 @@
     <Content Include="Reports\Purchase.rpt" />
     <Content Include="Reports\Quotation.rpt" />
     <Content Include="Reports\Sales.rpt" />
+    <Content Include="App_Browsers\qt.browser" />
     <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\Controller\MASTER\BrandMastersController.js" />
@@ -1051,9 +1068,32 @@
     <Content Include="Views\SalesMasters\Edit.cshtml" />
     <Content Include="Views\SalesMasters\Index.cshtml" />
     <Content Include="Views\SalesMasters\_SalesItem.cshtml" />
+    <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Shared\DetailCustomer.cshtml" />
+    <Content Include="Views\UserRoles\Create.cshtml" />
+    <Content Include="Views\UserRoles\Delete.cshtml" />
+    <Content Include="Views\UserRoles\Details.cshtml" />
+    <Content Include="Views\UserRoles\Edit.cshtml" />
+    <Content Include="Views\UserRoles\Index.cshtml" />
+    <Content Include="Views\MapPages\Create.cshtml" />
+    <Content Include="Views\MapPages\Delete.cshtml" />
+    <Content Include="Views\MapPages\Details.cshtml" />
+    <Content Include="Views\MapPages\Edit.cshtml" />
+    <Content Include="Views\MapPages\Index.cshtml" />
+    <Content Include="Views\PermissionsRoles\Create.cshtml" />
+    <Content Include="Views\PermissionsRoles\Delete.cshtml" />
+    <Content Include="Views\PermissionsRoles\Details.cshtml" />
+    <Content Include="Views\PermissionsRoles\Edit.cshtml" />
+    <Content Include="Views\PermissionsRoles\Index.cshtml" />
+    <Content Include="Views\Logins\Create.cshtml" />
+    <Content Include="Views\Logins\Delete.cshtml" />
+    <Content Include="Views\Logins\Details.cshtml" />
+    <Content Include="Views\Logins\Edit.cshtml" />
+    <Content Include="Views\Logins\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Controllers\TESTING\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

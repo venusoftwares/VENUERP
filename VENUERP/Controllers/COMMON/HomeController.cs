@@ -62,6 +62,7 @@ namespace VENUERP.Controllers
                         Session["ComCode"] = aa.ComCode;
                         Session["Username"] = aa.Username;
                         Session["Password"] = aa.Password;
+                        Session["RoleId"] = aa.RoleId;
                         return RedirectToAction("Index", "Home");
                     }
                 }

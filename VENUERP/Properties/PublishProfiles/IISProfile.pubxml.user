@@ -133,10 +133,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/13/2017 08:59:24</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
-      <publishTime>03/02/2015 09:32:26</publishTime>
+      <publishTime>02/03/2015 09:32:26</publishTime>
     </File>
     <File Include="bin/EntityFramework.SqlServer.dll">
-      <publishTime>03/02/2015 09:32:26</publishTime>
+      <publishTime>02/03/2015 09:32:26</publishTime>
     </File>
     <File Include="bin/es/CrystalDecisions.CrystalReports.Engine.resources.dll">
       <publishTime>11/13/2017 08:59:14</publishTime>
@@ -202,37 +202,37 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/13/2017 08:59:24</publishTime>
     </File>
     <File Include="bin/log4net.dll">
-      <publishTime>01/06/2011 21:24:28</publishTime>
+      <publishTime>06/01/2011 21:24:28</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>11/30/2016 16:07:42</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.DependencyCollector.dll">
-      <publishTime>12/07/2016 11:45:42</publishTime>
+      <publishTime>07/12/2016 11:45:42</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
-      <publishTime>12/07/2016 11:50:34</publishTime>
+      <publishTime>07/12/2016 11:50:34</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
-      <publishTime>12/06/2016 15:15:48</publishTime>
+      <publishTime>06/12/2016 15:15:48</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Web.dll">
-      <publishTime>12/07/2016 11:49:10</publishTime>
+      <publishTime>07/12/2016 11:49:10</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.WindowsServer.dll">
-      <publishTime>12/07/2016 11:50:34</publishTime>
+      <publishTime>07/12/2016 11:50:34</publishTime>
     </File>
     <File Include="bin/Microsoft.ApplicationInsights.dll">
-      <publishTime>12/06/2016 15:09:52</publishTime>
+      <publishTime>06/12/2016 15:09:52</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
-      <publishTime>04/03/2015 17:07:22</publishTime>
+      <publishTime>03/04/2015 17:07:22</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
-      <publishTime>04/03/2015 17:07:22</publishTime>
+      <publishTime>03/04/2015 17:07:22</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
-      <publishTime>04/03/2015 17:07:22</publishTime>
+      <publishTime>03/04/2015 17:07:22</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>05/05/2017 09:59:26</publishTime>
@@ -277,7 +277,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/13/2017 08:59:24</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>08/03/2014 20:33:56</publishTime>
+      <publishTime>03/08/2014 20:33:56</publishTime>
     </File>
     <File Include="bin/nl/CrystalDecisions.CrystalReports.Engine.resources.dll">
       <publishTime>11/13/2017 08:59:14</publishTime>
@@ -499,7 +499,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/28/2015 04:02:18</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
-      <publishTime>02/11/2014 15:26:04</publishTime>
+      <publishTime>11/02/2014 15:26:04</publishTime>
     </File>
     <File Include="bin/System.Web.Razor.dll">
       <publishTime>01/28/2015 04:02:32</publishTime>
@@ -532,28 +532,28 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/13/2017 08:59:24</publishTime>
     </File>
     <File Include="bin/VENUERP.dll">
-      <publishTime>07/27/2020 22:22:30</publishTime>
+      <publishTime>07/28/2020 09:09:24</publishTime>
     </File>
     <File Include="bin/VENUERP.Models.dll">
-      <publishTime>07/27/2020 22:19:43</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/VENUERP.Models.pdb">
-      <publishTime>07/27/2020 22:19:43</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/VENUERP.pdb">
-      <publishTime>07/27/2020 22:22:30</publishTime>
+      <publishTime>07/28/2020 09:09:24</publishTime>
     </File>
     <File Include="bin/VENUERP.Repository.dll">
-      <publishTime>07/27/2020 22:19:45</publishTime>
+      <publishTime>07/28/2020 09:07:01</publishTime>
     </File>
     <File Include="bin/VENUERP.Repository.pdb">
-      <publishTime>07/27/2020 22:19:45</publishTime>
+      <publishTime>07/28/2020 09:07:01</publishTime>
     </File>
     <File Include="bin/VENUERP.ViewModels.dll">
-      <publishTime>07/27/2020 22:19:44</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/VENUERP.ViewModels.pdb">
-      <publishTime>07/27/2020 22:19:44</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>07/17/2013 17:03:52</publishTime>
@@ -2376,6 +2376,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Scripts/Controller/TRANSACTION/PurchaseMastersController.js">
       <publishTime>07/26/2020 22:47:03</publishTime>
     </File>
+    <File Include="Scripts/Controller/TRANSACTION/QuotationMastersController.js">
+      <publishTime>07/28/2020 08:43:00</publishTime>
+    </File>
+    <File Include="Scripts/Controller/TRANSACTION/SalesMastersController.js">
+      <publishTime>07/28/2020 08:56:36</publishTime>
+    </File>
     <File Include="Scripts/DATATABLES/dataTables.bootstrap.min.js">
       <publishTime>07/24/2020 18:31:49</publishTime>
     </File>
@@ -2518,7 +2524,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/26/2020 12:08:30</publishTime>
     </File>
     <File Include="Views/IQuotationMasters/Create.cshtml">
-      <publishTime>07/26/2020 17:58:19</publishTime>
+      <publishTime>07/27/2020 22:38:03</publishTime>
     </File>
     <File Include="Views/IQuotationMasters/Delete.cshtml">
       <publishTime>07/26/2020 17:57:31</publishTime>
@@ -2527,7 +2533,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/26/2020 17:57:38</publishTime>
     </File>
     <File Include="Views/IQuotationMasters/Edit.cshtml">
-      <publishTime>07/26/2020 17:57:54</publishTime>
+      <publishTime>07/27/2020 22:36:28</publishTime>
     </File>
     <File Include="Views/IQuotationMasters/Index.cshtml">
       <publishTime>07/27/2020 07:29:18</publishTime>
@@ -2554,7 +2560,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/26/2020 22:48:24</publishTime>
     </File>
     <File Include="Views/ISalesMasters/SendMail.cshtml">
-      <publishTime>07/26/2020 20:18:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Views/ISalesMasters/_QuotationItem.cshtml">
       <publishTime>07/26/2020 20:20:55</publishTime>
@@ -2590,16 +2596,55 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/26/2020 22:48:21</publishTime>
     </File>
     <File Include="Views/PurchaseMasters/_PurchaseItem.cshtml">
-      <publishTime>07/26/2020 22:54:00</publishTime>
+      <publishTime>01/01/0001 00:00:00</publishTime>
+    </File>
+    <File Include="Views/QuotationMasters/Create.cshtml">
+      <publishTime>07/28/2020 08:48:29</publishTime>
+    </File>
+    <File Include="Views/QuotationMasters/Delete.cshtml">
+      <publishTime>07/28/2020 08:46:17</publishTime>
+    </File>
+    <File Include="Views/QuotationMasters/Details.cshtml">
+      <publishTime>07/28/2020 08:46:17</publishTime>
+    </File>
+    <File Include="Views/QuotationMasters/Edit.cshtml">
+      <publishTime>07/28/2020 08:48:37</publishTime>
+    </File>
+    <File Include="Views/QuotationMasters/Index.cshtml">
+      <publishTime>07/28/2020 08:57:22</publishTime>
+    </File>
+    <File Include="Views/QuotationMasters/SendMail.cshtml">
+      <publishTime>07/28/2020 08:49:02</publishTime>
+    </File>
+    <File Include="Views/QuotationMasters/_QuotationItem.cshtml">
+      <publishTime>07/28/2020 08:46:17</publishTime>
+    </File>
+    <File Include="Views/SalesMasters/Create.cshtml">
+      <publishTime>07/28/2020 08:47:50</publishTime>
+    </File>
+    <File Include="Views/SalesMasters/Delete.cshtml">
+      <publishTime>07/28/2020 08:46:18</publishTime>
+    </File>
+    <File Include="Views/SalesMasters/Details.cshtml">
+      <publishTime>07/28/2020 08:46:18</publishTime>
+    </File>
+    <File Include="Views/SalesMasters/Edit.cshtml">
+      <publishTime>07/28/2020 08:48:43</publishTime>
+    </File>
+    <File Include="Views/SalesMasters/Index.cshtml">
+      <publishTime>07/28/2020 08:56:53</publishTime>
+    </File>
+    <File Include="Views/SalesMasters/_SalesItem.cshtml">
+      <publishTime>07/28/2020 08:45:25</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>07/26/2020 08:05:50</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>07/27/2020 21:53:37</publishTime>
+      <publishTime>07/28/2020 08:43:32</publishTime>
     </File>
     <File Include="Views/Shared/_showmenu.cshtml">
-      <publishTime>07/27/2020 19:54:24</publishTime>
+      <publishTime>07/28/2020 08:44:51</publishTime>
     </File>
     <File Include="Views/SupplierMasters/Create.cshtml">
       <publishTime>07/26/2020 19:59:58</publishTime>
@@ -2623,7 +2668,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/24/2020 21:57:39</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>07/27/2020 22:19:53</publishTime>
+      <publishTime>07/28/2020 09:09:25</publishTime>
     </File>
   </ItemGroup>
 </Project>
