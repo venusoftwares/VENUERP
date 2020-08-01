@@ -204,3 +204,6 @@ C:\venuerp\VENUERP\obj\Release\VENUERP.csproj.CoreCompileInputs.cache
 C:\venuerp\VENUERP\obj\Release\VENUERP.csproj.CopyComplete
 C:\venuerp\VENUERP\obj\Release\VENUERP.dll
 C:\venuerp\VENUERP\obj\Release\VENUERP.pdb
+C:\venuerp\VENUERP\bin\itextsharp.dll
+C:\venuerp\VENUERP\bin\Rotativa.dll
+C:\venuerp\VENUERP\bin\itextsharp.xml

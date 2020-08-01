@@ -1,0 +1,548 @@
+﻿@model VENUERP.ViewModels.ERP.DashboardViewModel
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="list-group">
+
+                <a href="/BrandMasters/Index" class="list-group-item visitor">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-book fa  "></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        Tot Brands:  @Model.TotalBrands
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="/CategoryMasters/Index" class="list-group-item facebook-like">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-barcode fa  "></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        Tot Category:  @Model.TotalCategories
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="/ItemMasters/Index" class="list-group-item google-plus">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-adjust fa  "></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        Tot Items:  @Model.TotalItems
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="/CustomerMasters/Index" class="list-group-item twitter">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-pencil fa"></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        Tot Customers:  @Model.TotalCustomers
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="list-group">
+
+                <a href="/SupplierMasters/Index" class="list-group-item visitor">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-book fa  "></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        Tot Suppliers:  @Model.TotalSuppliers
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="/IQuotationMasters/Index" class="list-group-item facebook-like">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-bell fa  "></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        Tot Quotations:  @Model.TotalQuotation
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="/IQuotationMasters/Index" class="list-group-item google-plus">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-adjust fa  "></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        QAmount:  @Model.TodayTotalQuotationAmount
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="/ISalesMasters/Index" class="list-group-item twitter">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-pencil fa"></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        Tot Sales:  @Model.TotalSales
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="list-group">
+
+                <a href="/ISalesMasters/Index" class="list-group-item visitor">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-book fa  "></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        SAmount:  @Model.TodayTotalSalesAmount
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="/PurchaseMasters/Index" class="list-group-item facebook-like">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-bell fa  "></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        Tot Purchase:  @Model.TotalPurchase
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="/PurchaseMasters/Index" class="list-group-item google-plus">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-adjust fa  "></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        PAmount:  @Model.TodayTotalPurchases
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="/CashPayment/Index" class="list-group-item twitter">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-pencil fa"></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        CPayment:  @Model.TotalCashPayment
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="list-group">
+
+                <a href="/CashReceived/Index" class="list-group-item visitor">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-book fa  "></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        CPayment:  @Model.TotalCashReceived
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+            </div>
+        </div>
+        @*<div class="col-md-3">
+            <div class="list-group">
+                <a href="#" class="list-group-item facebook-like">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-bell fa  "></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        1000
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+            </div>*@
+    </div>
+
+    <div class="col-md-3">
+        @*<div class="list-group">
+                <a href="#" class="list-group-item google-plus">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-adjust fa  "></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        1000
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+            </div>*@
+    </div>
+
+    <div class="col-md-3">
+        @*<div class="list-group">
+                <a href="#" class="list-group-item twitter">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-pencil fa"></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        1000
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+
+            </div>*@
+    </div>
+
+</div>
+<div class="row">
+    @*<div class="col-md-3">
+            <div class="list-group">
+
+                <a href="#" class="list-group-item visitor">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-book fa  "></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        1000
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="#" class="list-group-item facebook-like">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-bell fa  "></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        1000
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+            </div>
+        </div>*@
+
+    @*<div class="col-md-3">
+            <div class="list-group">
+                <a href="#" class="list-group-item google-plus">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-adjust fa  "></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        1000
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="#" class="list-group-item twitter">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-pencil fa"></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        1000
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+
+            </div>
+        </div>*@
+    
+
+</div>
+@*<div class="row">
+        <div class="col-md-3">
+            <div class="list-group">
+
+                <a href="#" class="list-group-item visitor">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-book fa  "></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        1000
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="#" class="list-group-item facebook-like">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-bell fa  "></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        1000
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="#" class="list-group-item google-plus">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-adjust fa  "></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        1000
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="#" class="list-group-item twitter">
+                    <h3 class="pull-right">
+                        <i class="glyphicon glyphicon-pencil fa"></i>
+                    </h3>
+                    <h4 class="list-group-item-heading count">
+                        1000
+                    </h4>
+                    <p class="list-group-item-text">
+                        Views Details..!
+                    </p>
+                </a>
+
+            </div>
+        </div>
+
+    </div>*@
+<!-- Button to Open the Modal -->
+
+
+
+<style>
+    body {
+        margin-top: 20px;
+    }
+
+    .fa {
+        font-size: 50px;
+        text-align: right;
+        position: absolute;
+        top: 7px;
+        right: 27px;
+        outline: none;
+    }
+
+    a {
+        transition: all .3s ease;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -o-transition: all .3s ease;
+    }
+        /* Visitor */
+        a.visitor i, .visitor h4.list-group-item-heading {
+            color: #E48A07;
+        }
+
+        a.visitor:hover {
+            background-color: #E48A07;
+        }
+
+            a.visitor:hover * {
+                color: #FFF;
+            }
+        /* Facebook */
+        a.facebook-like i, .facebook-like h4.list-group-item-heading {
+            color: #3b5998;
+        }
+
+        a.facebook-like:hover {
+            background-color: #3b5998;
+        }
+
+            a.facebook-like:hover * {
+                color: #FFF;
+            }
+        /* Google */
+        a.google-plus i, .google-plus h4.list-group-item-heading {
+            color: #dd4b39;
+        }
+
+        a.google-plus:hover {
+            background-color: #dd4b39;
+        }
+
+            a.google-plus:hover * {
+                color: #FFF;
+            }
+        /* Twitter */
+        a.twitter i, .twitter h4.list-group-item-heading {
+            color: #00acee;
+        }
+
+        a.twitter:hover {
+            background-color: #00acee;
+        }
+
+            a.twitter:hover * {
+                color: #FFF;
+            }
+        /* Linkedin */
+        a.linkedin i, .linkedin h4.list-group-item-heading {
+            color: #0e76a8;
+        }
+
+        a.linkedin:hover {
+            background-color: #0e76a8;
+        }
+
+            a.linkedin:hover * {
+                color: #FFF;
+            }
+        /* Tumblr */
+        a.tumblr i, .tumblr h4.list-group-item-heading {
+            color: #34526f;
+        }
+
+        a.tumblr:hover {
+            background-color: #34526f;
+        }
+
+            a.tumblr:hover * {
+                color: #FFF;
+            }
+        /* Youtube */
+        a.youtube i, .youtube h4.list-group-item-heading {
+            color: #c4302b;
+        }
+
+        a.youtube:hover {
+            background-color: #c4302b;
+        }
+
+            a.youtube:hover * {
+                color: #FFF;
+            }
+        /* Vimeo */
+        a.vimeo i, .vimeo h4.list-group-item-heading {
+            color: #44bbff;
+        }
+
+        a.vimeo:hover {
+            background-color: #44bbff;
+        }
+
+            a.vimeo:hover * {
+                color: #FFF;
+            }
+</style>
+@*<script type="text/javascript">
+
+        // Animate the element's value from x to y:
+    $({ someValue: 0 }).animate({ someValue: Math.floor(Math.random() * 3000) }, {
+        duration: 3000,
+        easing: 'swing', // can be anything
+        step: function () { // called on every step
+            // Update the element's text with rounded-up value:
+            $('.count').text(commaSeparateNumber(Math.round(this.someValue)));
+        }
+    });
+
+    function commaSeparateNumber(val) {
+        while (/(\d+)(\d{3})/.test(val.toString())) {
+            val = val.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+        }
+        return val;
+    }
+
+    </script>*@

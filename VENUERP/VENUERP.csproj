@@ -950,7 +950,6 @@
     <Content Include="Reports\Quotation.rpt" />
     <Content Include="Reports\Sales.rpt" />
     <Content Include="App_Browsers\qt.browser" />
-    <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\Controller\MASTER\BrandMastersController.js" />
     <Content Include="Scripts\Controller\MASTER\CategoryMastersController.js" />
@@ -1094,6 +1093,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\TESTING\" />
+    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

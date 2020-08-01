@@ -1,0 +1,117 @@
+﻿<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+<br />
+<a href="/Home/Index" style="color:yellow">DASHBOARD</a>
+
+<button class="dropdown-btn">
+    MASTER
+    <i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-container">
+    <a href="/BrandMasters/Index">BRAND MASTER</a>
+    <a href="/CategoryMasters/Index">CATEGORY MASTER</a>
+    <a href="/ItemMasters/Index">ITEM MASTER</a>
+    <a href="/SupplierMasters/Index">SUPPLIER MASTER</a>
+    <a href="/CustomerMasters/Index">CUSTOMER MASTER</a>
+    <a href="/CompanyMasters/Index">COMPANY MASTER</a>
+    <a href="/BankMasters/Index">BANK MASTER</a>
+
+
+</div>
+
+<button class="dropdown-btn">
+    TRANSACTION
+    <i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-container">
+    <a href="/PurchaseMasters/Index">PURCHASE</a>
+    @*<a href="/PurchaseReturnMasters/Index">PURCHASE RETURN</a>*@
+        <a href="/SalesMasters/Index">SALES</a>
+        @*<a href="/SalesReturnMasters/Index">SALES RETURN</a>*@
+    <a href="/QuotationMasters/Index">QUOTATION</a>
+    <a href="/ISalesMasters/Index">I-SALES</a>
+    <a href="/IQuotationMasters/Index">I-QUOTATION</a>
+
+    @*<a href="/CashPayment/Index">CASH PAYMENT</a>
+        <a href="/CashReceived/Index">CASH RECEIVED</a>*@
+</div>
+<button class="dropdown-btn">
+    PAYMENTS
+    <i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-container">
+    <a href="/CashPayment/Index">PAYMENT</a>
+    <a href="/CashReceived/Index">RECEIVED</a>
+    @*<a href="#">SALES</a>
+        <a href="#">SALES RETURN</a>
+        <a href="#">QUOTATION</a>
+        <a href="#">PAYMENT</a>
+        <a href="#">TRIAL BALANCE</a>
+        <a href="#">BALANCE SHEET</a>*@
+
+</div>
+
+<button class="dropdown-btn">
+    STATEMENT
+    <i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-container">
+    @*<a href="#">PURCHASE</a>
+        <a href="#">PURCHASE RETURN</a>
+        <a href="#">SALES</a>
+        <a href="#">SALES RETURN</a>
+        <a href="#">QUOTATION</a>
+        <a href="#">PAYMENT</a>
+        <a href="#">TRIAL BALANCE</a>
+        <a href="#">BALANCE SHEET</a>*@
+
+</div>
+
+<button class="dropdown-btn">
+    UTILITIES
+    <i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-container">
+    <a href="/UserRoles/Index">USER ROLES</a>
+    <a href="/MapPages/Index">MAP PAGES</a>
+    <a href="/PermissionsRoles/Index">PERMISSION ROLES</a>
+    <a href="/Logins/Index">USERS</a> 
+</div>
+
+<button class="dropdown-btn">
+    REPORT
+    <i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-container">
+    @*<a href="/GenerateReport/Index">REPORTS</a>
+        <a href="#">PURCHASE RETURN REPORT</a>
+        <a href="#">SALES REPORT</a>
+        <a href="#">SALES RETURN REPORT</a>
+        <a href="#">QUOTATION REPORT</a>*@
+</div>
+
+<a href="/Home/About" style="color:greenyellow">ABOUT</a>
+
+<a href="/Home/Login" style="color:red">LOG OUT</a>
+
+ 
+
+
+<script>
+
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+        });
+    }
+</script>
+
