@@ -4,7 +4,8 @@
 
 <br />
 <a href="/Home/Index" style="color:yellow">DASHBOARD</a>
-
+@if (Model.Any(x => x.Pages == "BrandMasters" || x.Pages == "CategoryMasters" || x.Pages == "ItemMasters" || x.Pages == "SupplierMasters" || x.Pages == "CustomerMasters"))
+{
 <button class="dropdown-btn">
     MASTER
     <i class="fa fa-caret-down"></i>
@@ -33,13 +34,12 @@
     {
         <a href="/CustomerMasters/Index">CUSTOMER MASTER</a>
     }
-
-
-
-
-
+     
 </div>
+}
 
+@if (Model.Any(x => x.Pages == "PurchaseMasters" || x.Pages == "SalesMasters" || x.Pages == "QuotationMasters" || x.Pages == "ISalesMasters" || x.Pages == "IQuotationMasters"))
+{
 <button class="dropdown-btn">
     TRANSACTION
     <i class="fa fa-caret-down"></i>
@@ -76,6 +76,10 @@
     @*<a href="/CashPayment/Index">CASH PAYMENT</a>
         <a href="/CashReceived/Index">CASH RECEIVED</a>*@
 </div>
+}
+
+@if (Model.Any(x => x.Pages == "CashPayment" || x.Pages == "CashReceived"))
+{
 <button class="dropdown-btn">
     PAYMENTS
     <i class="fa fa-caret-down"></i>
@@ -83,12 +87,12 @@
 <div class="dropdown-container">
     @if (Model.Any(x => x.Pages == "CashPayment"))
     {
-        <a href="/CashPayment/Index">PAYMENT</a>
+        <a href="/CashPayment/Index">CASH PAYMENT</a>
     }
 
     @if (Model.Any(x => x.Pages == "CashReceived"))
     {
-        <a href="/CashReceived/Index">RECEIVED</a>
+        <a href="/CashReceived/Index">CASH RECEIVED</a>
     }
 
     @*<a href="#">SALES</a>
@@ -99,23 +103,17 @@
         <a href="#">BALANCE SHEET</a>*@
 
 </div>
-
-<button class="dropdown-btn">
+}
+@*<button class="dropdown-btn">
     STATEMENT
     <i class="fa fa-caret-down"></i>
 </button>
 <div class="dropdown-container">
-    @*<a href="#">PURCHASE</a>
-        <a href="#">PURCHASE RETURN</a>
-        <a href="#">SALES</a>
-        <a href="#">SALES RETURN</a>
-        <a href="#">QUOTATION</a>
-        <a href="#">PAYMENT</a>
-        <a href="#">TRIAL BALANCE</a>
-        <a href="#">BALANCE SHEET</a>*@
+ 
 
-</div>
-
+</div>*@
+@if (Model.Any(x => x.Pages == "CompanyMasters" || x.Pages == "BankMasters" || x.Pages == "UserRoles" || x.Pages == "MapPages" || x.Pages == "PermissionsRoles" || x.Pages == "Logins"))
+{
 <button class="dropdown-btn">
     UTILITIES
     <i class="fa fa-caret-down"></i>
@@ -151,19 +149,8 @@
     }
 
 </div>
-
-<button class="dropdown-btn">
-    REPORT
-    <i class="fa fa-caret-down"></i>
-</button>
-<div class="dropdown-container">
-    @*<a href="/GenerateReport/Index">REPORTS</a>
-        <a href="#">PURCHASE RETURN REPORT</a>
-        <a href="#">SALES REPORT</a>
-        <a href="#">SALES RETURN REPORT</a>
-        <a href="#">QUOTATION REPORT</a>*@
-</div>
-
+}
+ 
 <a href="/Home/About" style="color:greenyellow">ABOUT</a>
 
 <a href="/Home/Login" style="color:red">LOG OUT</a>

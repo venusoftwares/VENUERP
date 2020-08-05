@@ -12,9 +12,11 @@ namespace VENUERP.Models
         public int LoginId { get; set; }
 
         [StringLength(50)]
+        [Required]
         public string Username { get; set; }
 
         [StringLength(50)]
+        [Required]
         public string Password { get; set; }
 
         public DateTime? CreatedDate { get; set; }

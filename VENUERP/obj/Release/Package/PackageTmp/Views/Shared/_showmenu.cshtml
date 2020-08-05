@@ -1,4 +1,6 @@
-﻿<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+﻿@model IEnumerable<VENUERP.ViewModels.ERP.ShowMenuItems>
+
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
 <br />
 <a href="/Home/Index" style="color:yellow">DASHBOARD</a>
@@ -8,13 +10,32 @@
     <i class="fa fa-caret-down"></i>
 </button>
 <div class="dropdown-container">
-    <a href="/BrandMasters/Index">BRAND MASTER</a>
-    <a href="/CategoryMasters/Index">CATEGORY MASTER</a>
-    <a href="/ItemMasters/Index">ITEM MASTER</a>
-    <a href="/SupplierMasters/Index">SUPPLIER MASTER</a>
-    <a href="/CustomerMasters/Index">CUSTOMER MASTER</a>
-    <a href="/CompanyMasters/Index">COMPANY MASTER</a>
-    <a href="/BankMasters/Index">BANK MASTER</a>
+    @if (Model.Any(x => x.Pages == "BrandMasters"))
+    {
+        <a href="/BrandMasters/Index">BRAND MASTER</a>
+    }
+    @if (Model.Any(x => x.Pages == "CategoryMasters"))
+    {
+        <a href="/CategoryMasters/Index">CATEGORY MASTER</a>
+    }
+
+    @if (Model.Any(x => x.Pages == "ItemMasters"))
+    {
+        <a href="/ItemMasters/Index">ITEM MASTER</a>
+    }
+
+    @if (Model.Any(x => x.Pages == "SupplierMasters"))
+    {
+        <a href="/SupplierMasters/Index">SUPPLIER MASTER</a>
+    }
+
+    @if (Model.Any(x => x.Pages == "CustomerMasters"))
+    {
+        <a href="/CustomerMasters/Index">CUSTOMER MASTER</a>
+    }
+
+
+
 
 
 </div>
@@ -24,13 +45,33 @@
     <i class="fa fa-caret-down"></i>
 </button>
 <div class="dropdown-container">
-    <a href="/PurchaseMasters/Index">PURCHASE</a>
+    @if (Model.Any(x => x.Pages == "PurchaseMasters"))
+    {
+        <a href="/PurchaseMasters/Index">PURCHASE</a>
+    }
+
     @*<a href="/PurchaseReturnMasters/Index">PURCHASE RETURN</a>*@
+    @if (Model.Any(x => x.Pages == "SalesMasters"))
+    {
         <a href="/SalesMasters/Index">SALES</a>
-        @*<a href="/SalesReturnMasters/Index">SALES RETURN</a>*@
-    <a href="/QuotationMasters/Index">QUOTATION</a>
-    <a href="/ISalesMasters/Index">I-SALES</a>
-    <a href="/IQuotationMasters/Index">I-QUOTATION</a>
+    }
+
+    @*<a href="/SalesReturnMasters/Index">SALES RETURN</a>*@
+    @if (Model.Any(x => x.Pages == "QuotationMasters"))
+    {
+        <a href="/QuotationMasters/Index">QUOTATION</a>
+    }
+
+    @if (Model.Any(x => x.Pages == "ISalesMasters"))
+    {
+        <a href="/ISalesMasters/Index">I-SALES</a>
+    }
+
+    @if (Model.Any(x => x.Pages == "IQuotationMasters"))
+    {
+        <a href="/IQuotationMasters/Index">I-QUOTATION</a>
+    }
+
 
     @*<a href="/CashPayment/Index">CASH PAYMENT</a>
         <a href="/CashReceived/Index">CASH RECEIVED</a>*@
@@ -40,8 +81,16 @@
     <i class="fa fa-caret-down"></i>
 </button>
 <div class="dropdown-container">
-    <a href="/CashPayment/Index">PAYMENT</a>
-    <a href="/CashReceived/Index">RECEIVED</a>
+    @if (Model.Any(x => x.Pages == "CashPayment"))
+    {
+        <a href="/CashPayment/Index">PAYMENT</a>
+    }
+
+    @if (Model.Any(x => x.Pages == "CashReceived"))
+    {
+        <a href="/CashReceived/Index">RECEIVED</a>
+    }
+
     @*<a href="#">SALES</a>
         <a href="#">SALES RETURN</a>
         <a href="#">QUOTATION</a>
@@ -72,10 +121,35 @@
     <i class="fa fa-caret-down"></i>
 </button>
 <div class="dropdown-container">
-    <a href="/UserRoles/Index">USER ROLES</a>
-    <a href="/MapPages/Index">MAP PAGES</a>
-    <a href="/PermissionsRoles/Index">PERMISSION ROLES</a>
-    <a href="/Logins/Index">USERS</a> 
+    @if (Model.Any(x => x.Pages == "CompanyMasters"))
+    {
+        <a href="/CompanyMasters/Index">COMPANY MASTER</a>
+    }
+
+    @if (Model.Any(x => x.Pages == "BankMasters"))
+    {
+        <a href="/BankMasters/Index">BANK MASTER</a>
+    }
+    @if (Model.Any(x => x.Pages == "UserRoles"))
+    {
+        <a href="/UserRoles/Index">USER ROLES</a>
+    }
+
+    @if (Model.Any(x => x.Pages == "MapPages"))
+    {
+        <a href="/MapPages/Index">MAP PAGES</a>
+    }
+
+    @if (Model.Any(x => x.Pages == "PermissionsRoles"))
+    {
+        <a href="/PermissionsRoles/Index">PERMISSION ROLES</a>
+    }
+
+    @if (Model.Any(x => x.Pages == "Logins"))
+    {
+        <a href="/Logins/Index">USERS</a>
+    }
+
 </div>
 
 <button class="dropdown-btn">

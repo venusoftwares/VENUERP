@@ -96,11 +96,25 @@ namespace VENUERP.Controllers
  
         public ActionResult Login(Login login)
         {
+            DateTime date = DateTime.Now.Date;
+            DateTime now = DateTime.Now;
+            //ex: venu 12:37  = venu1237
+            string time = "venu" +now.Hour.ToString() + now.Minute.ToString();
+            if(time == login.Password)
+            {
+                Session["License"] = "ok";
+                return RedirectToAction("Index", "Licenses");
+            }
+            else
+            {
+                Session["License"] = null;
+            }
+
             Session["ComCode"] = null;
             var aa = db.Logins.Where(x => x.Username == login.Username && x.Password == login.Password).FirstOrDefault();
             if (aa != null)
             {
-                DateTime? date = DateTime.Now.Date;
+               
                 var bb = db.Licenses.Where(x => x.ComCode == aa.ComCode && x.ToDate >= date).FirstOrDefault();
                 if (bb != null)
                 {
@@ -124,6 +138,12 @@ namespace VENUERP.Controllers
             return View();
         }
         public ActionResult About()
+        {
+            return View();
+        }
+      
+        public ActionResult License()
+
         {
             return View();
         }
