@@ -57,6 +57,7 @@ C:\venuerp\VENUERP\bin\CrystalDecisions.ReportSource.dll
 C:\venuerp\VENUERP\bin\CrystalDecisions.Shared.dll
 C:\venuerp\VENUERP\bin\EntityFramework.dll
 C:\venuerp\VENUERP\bin\EntityFramework.SqlServer.dll
+C:\venuerp\VENUERP\bin\itextsharp.dll
 C:\venuerp\VENUERP\bin\log4net.dll
 C:\venuerp\VENUERP\bin\Microsoft.AI.Agent.Intercept.dll
 C:\venuerp\VENUERP\bin\Microsoft.AI.DependencyCollector.dll
@@ -81,6 +82,7 @@ C:\venuerp\VENUERP\bin\Microsoft.Owin.Security.Twitter.dll
 C:\venuerp\VENUERP\bin\Microsoft.Web.Infrastructure.dll
 C:\venuerp\VENUERP\bin\Newtonsoft.Json.dll
 C:\venuerp\VENUERP\bin\Owin.dll
+C:\venuerp\VENUERP\bin\Rotativa.dll
 C:\venuerp\VENUERP\bin\System.Net.Http.Formatting.dll
 C:\venuerp\VENUERP\bin\System.Web.Helpers.dll
 C:\venuerp\VENUERP\bin\System.Web.Http.dll
@@ -99,6 +101,7 @@ C:\venuerp\VENUERP\bin\WebGrease.dll
 C:\venuerp\VENUERP\bin\VENUERP.Models.pdb
 C:\venuerp\VENUERP\bin\VENUERP.Repository.pdb
 C:\venuerp\VENUERP\bin\VENUERP.ViewModels.pdb
+C:\venuerp\VENUERP\bin\itextsharp.xml
 C:\venuerp\VENUERP\bin\log4net.xml
 C:\venuerp\VENUERP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\venuerp\VENUERP\bin\Newtonsoft.Json.xml
@@ -204,6 +207,3 @@ C:\venuerp\VENUERP\obj\Release\VENUERP.csproj.CoreCompileInputs.cache
 C:\venuerp\VENUERP\obj\Release\VENUERP.csproj.CopyComplete
 C:\venuerp\VENUERP\obj\Release\VENUERP.dll
 C:\venuerp\VENUERP\obj\Release\VENUERP.pdb
-C:\venuerp\VENUERP\bin\itextsharp.dll
-C:\venuerp\VENUERP\bin\Rotativa.dll
-C:\venuerp\VENUERP\bin\itextsharp.xml

@@ -4,6 +4,7 @@ namespace VENUERP.Models
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
+    using VENUERP.Models.SCM;
 
     public partial class DatabaseContext : DbContext
     {
@@ -44,6 +45,12 @@ namespace VENUERP.Models
         public virtual DbSet<PermissionsRole> PermissionsRole { get; set; }
         public virtual DbSet<UserRoles> UserRoles { get; set; }
 
+        // SCM
+        public virtual DbSet<MeterialMaster> MeterialMaster { get; set; }
+        public virtual DbSet<MeterialRateMaster> MeterialRateMaster { get; set; }
+        public virtual DbSet<SupplyMaster> SupplyMaster { get; set; }
+        public virtual DbSet<SupplyReturnMaster> SupplyReturnMaster { get; set; }
+        public virtual DbSet<SupplyReturnRate> SupplyReturnRate { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             

@@ -1,0 +1,123 @@
+﻿@model VENUERP.Models.SCM.SupplyReturnRate
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SupplyReturnRate</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FromDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FromDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ToDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ToDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplyCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupplyCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplyReturnCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupplyReturnCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PerDayRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PerDayRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Qty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Qty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalDays)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalDays)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Discount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Discount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerCode)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

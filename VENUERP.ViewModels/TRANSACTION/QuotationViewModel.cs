@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using VENUERP.Models;
 
-namespace VENUERP.ViewModels
+namespace VENUERP.ViewModels.TRANSACTION
 {
     public class QuotationViewModel
     {
@@ -18,11 +18,11 @@ namespace VENUERP.ViewModels
 
             public int CustomerId { get; set; }
           
-        public int? Qty { get; set; }
+            public int? Qty { get; set; }
             public decimal? Rate { get; set; }
             public decimal? Amount { get; set; }
 
-            public  QuotationMaster QuotationMaster  { get; set; }
+            public  QuotationMaster QuotationMaster { get; set; }
             public ItemMaster ItemMaster { get; set; }
 
             public BrandMaster BrandMaster { get; set; }

@@ -1,4 +1,4 @@
-﻿@model VENUERP.ViewModels.IQuotationViewModel
+﻿@model VENUERP.ViewModels.TRANSACTION.QuotationViewModel
 
 @{
     ViewBag.Title = "Create";
@@ -23,6 +23,7 @@
                     <th>
                         @Html.Label("Date:", htmlAttributes: new { @class = "control-label col-md-3" })
                         @Html.EditorFor(model => model.QuotationMaster.QuotationDate, new { htmlAttributes = new { @class = "", type = "date" } })
+                     
 
                     </th>
                     <th>
@@ -82,7 +83,7 @@
                     </th>
                     <th>
                         <div class="form-group">
-                            @Html.LabelFor(model => model, htmlAttributes: new { @class = "control-label col-md-5" })
+                            @Html.LabelFor(model => model.Qty, htmlAttributes: new { @class = "control-label col-md-5" })
                             <div class="col-md-10">
                                 @Html.TextBoxFor(model => model.Qty, new { htmlAttributes = new { @class = "PQty" } })
                                 @Html.ValidationMessageFor(model => model.Qty, "", new { @class = "text-danger" })

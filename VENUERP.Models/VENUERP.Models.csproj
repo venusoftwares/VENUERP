@@ -61,6 +61,11 @@
     <Compile Include="MASTER\CategoryMaster.cs" />
     <Compile Include="MASTER\CompanyMaster.cs" />
     <Compile Include="MASTER\CustomerMaster.cs" />
+    <Compile Include="SCM\MeterialMaster.cs" />
+    <Compile Include="SCM\MeterialRateMaster.cs" />
+    <Compile Include="SCM\SupplyMaster.cs" />
+    <Compile Include="SCM\SupplyReturnMaster.cs" />
+    <Compile Include="SCM\SupplyReturnRate.cs" />
     <Compile Include="TRANSACTION\IQuotationDetailItem.cs" />
     <Compile Include="TRANSACTION\IQuotationMaster.cs" />
     <Compile Include="TRANSACTION\ISalesDetailItem.cs" />

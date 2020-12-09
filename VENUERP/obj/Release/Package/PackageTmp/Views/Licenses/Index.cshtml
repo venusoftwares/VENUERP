@@ -1,0 +1,46 @@
+﻿@model IEnumerable<VENUERP.Models.License>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.companyMaster.CompanyName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ToDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FromDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.companyMaster.CompanyName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ToDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FromDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Lsno }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Lsno }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Lsno })
+        </td>
+    </tr>
+}
+
+</table>

@@ -10,7 +10,7 @@ using VENUERP.ViewModels.ERP;
 
 namespace VENUERP.Controllers
 {
-    
+
     public class HomeController : Controller
     {
         public DatabaseContext db;
@@ -36,7 +36,7 @@ namespace VENUERP.Controllers
             dashboardViewModel.TotalPurchase = db.PurchaseMasters.Count();
 
 
-            dashboardViewModel.TotalCashPayment = db.CashMasters.Where(x => x.Nature == "Payment").Sum(x => x.Amount); 
+            dashboardViewModel.TotalCashPayment = db.CashMasters.Where(x => x.Nature == "Payment").Sum(x => x.Amount);
             dashboardViewModel.TotalCashReceived = db.CashMasters.Where(x => x.Nature == "Receipt").Sum(x => x.Amount);
             dashboardViewModel.TodayTotalQuotationAmount = db.IQuotationMaster.Sum(x => x.GrandTotal);
             dashboardViewModel.TodayTotalSalesAmount = db.ISalesMaster.Sum(x => x.GrandTotal);
@@ -44,7 +44,7 @@ namespace VENUERP.Controllers
 
             ViewBag.Title = "Home Page";
 
-            if(DashboardName == "SuperAdminDashboard")
+            if (DashboardName == "SuperAdminDashboard")
             {
                 return View("SuperAdminDashboard", dashboardViewModel);
             }
@@ -85,10 +85,13 @@ namespace VENUERP.Controllers
         public ActionResult ShowMenus()
         {
             int RoleId = Convert.ToInt32(Session["RoleId"]);
-            var showmenu = db.PermissionsRole.Include(x => x.MapPages).Where(x => x.RoleId == RoleId).Select(x => new ShowMenuItems()
-            {
-                Pages = x.MapPages.Pages
-            }).Distinct();
+            var showmenu = db.PermissionsRole
+                .Include(x => x.MapPages)
+                .Where(x => x.RoleId == RoleId && (x.Add == true || x.Edit == true || x.Delete == true || x.View == true))
+                .Select(x => new ShowMenuItems()
+                {
+                    Pages = x.MapPages.Pages
+                }).Distinct();
             return PartialView("_showmenu", showmenu);
         }
 
@@ -143,7 +146,6 @@ namespace VENUERP.Controllers
         }
       
         public ActionResult License()
-
         {
             return View();
         }

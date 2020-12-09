@@ -1,0 +1,83 @@
+﻿@model VENUERP.Models.SCM.SupplyReturnMaster
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SupplyReturnMaster</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplyReturnDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupplyReturnDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SupplyReturnNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SupplyReturnNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ItemCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ItemCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Qty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Qty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ConCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
